@@ -152,83 +152,78 @@ class ReadingsList extends Component {
                         //     width: 64,
                         //     sortable: false
                         // },
+                        // {
+                        //     Header: 'ID',
+                        //     accessor: 'id',
+                        //     filterable: false,
+                        //     className: 'justify-center font-bold'
+                        // },
                         {
                             Header: 'Time',
-                            // accessor: 'created_time',
+                            accessor: 'created_time',
                             id: 'created_time',
                             width: 150,
-
-                            accessor: d => {
-                                return moment(d.created_time)
-                                    .local()
-                                    .format("DD-MM-YYYY hh:mm:ss a")
-                            },
+                            // accessor: d => {
+                            //     return moment(d.created_time)
+                            //         // .local()
+                            //         .format("DD-MM-YYYY hh:mm:ss")
+                            // },
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'CH4',
                             accessor: 'ch4',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'CO',
                             accessor: 'co',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'Dust',
                             accessor: 'dust',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'Humidity',
                             accessor: 'humidity',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'NH3',
                             accessor: 'nh3',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'NO2',
                             accessor: 'no2',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'CO2',
                             accessor: 'co2',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'Temperature',
                             accessor: 'temperature',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         {
                             Header: 'Node',
                             accessor: 'node_id',
                             filterable: false,
-                            className: 'font-bold'
-                            // className: "justify-center",
+                            className: 'justify-center font-bold'
                         },
                         // {
                         //     Header: '',
@@ -252,19 +247,29 @@ class ReadingsList extends Component {
                         // }
                     ]}
                     defaultPageSize={20}
-                    resizable={false}
-                    noDataText="No reading found"
+                    resizable={true}
+                    noDataText="No Air Reading found"
                     loading={this.state.loading}
                     showPagination={true}
                     showPaginationTop={false}
                     showPaginationBottom={true}
                     pages={totalPages}
                     pageSizeOptions={[20, 25, 50, 100]}
+                    pageSize={this.state.pageSize}
+                    page={this.state.page}
+                    sorted={this.state.sorted}
+                    onPageChange={(page) => this.setState({ page: page })}
+                    onPageSizeChange={(pageSize, page) => {
+                        this.setState({ pageSize: pageSize, page: page });
+                    }}
+                    onSortedChange={(val) => {
+                        this.setState({ sorted: val });
+                    }}
                     manual  // this would indicate that server side pagination has been enabled
                     onFetchData={(state, instance) => {
-                        this.setState({loading: true});
+                        // this.setState({loading: true});
                         getReadingsPaginationData(state.page, state.pageSize, state.sorted, state.filtered);
-                        this.setState({loading: false});
+                        // this.setState({loading: false});
                     }}
                 />
             </FuseAnimate>

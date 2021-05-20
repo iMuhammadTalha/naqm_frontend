@@ -53,6 +53,12 @@ class Login extends Component {
                             Welcome to the NAQM!
                         </Typography>
                     </FuseAnimate>
+
+                    <FuseAnimate delay={400}>
+                    <Typography variant="subtitle1" color="inherit" className="max-w-512 mt-16">
+                    NUST Air Quality Monitoring Using IoT
+                    </Typography>
+                </FuseAnimate>
                 </div>
 
                 <FuseAnimate animation={{translateX: [0, '100%']}}>

@@ -376,7 +376,7 @@ export const getReadingsPaginationData = (
     axios
         .get(Base_URL + querys)
         .then((res) => {
-            // console.log("readings get after calling", res.data);
+            // console.log("readings get after calling", res);
             dispatch({
                 type: GET_Readings,
                 payload: res.data.records,
