@@ -31,13 +31,34 @@ const superAdminNavigationConfig = [
         type: 'group',
         icon: 'whatshot',
         children: [
+            // {
+            //     id: 'dashboard',
+            //     title: 'Dashbaord',
+            //     type: 'item',
+            //     icon: 'whatshot',
+            //     url: '/dashboard'
+            // },
             {
-                id: 'readings',
+                id: 'airdashboard',
+                title: 'Dashbaord',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/airdashboard'
+            },
+            {
+                id: 'air',
                 title: 'Air Readings',
                 type: 'item',
                 icon: 'whatshot',
-                url: '/readings'
-            }
+                url: '/air'
+            },
+            // {
+            //     id: 'graph',
+            //     title: 'Graph',
+            //     type: 'item',
+            //     icon: 'whatshot',
+            //     url: '/graph'
+            // }
         ]
     },
     {

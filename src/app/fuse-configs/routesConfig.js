@@ -3,20 +3,27 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
 import {FuseUtils} from "@fuse/index";
-import {DashboardConfig} from "app/main/dashboard/DashboardConfig";
+import {DashboardAppConfig} from "app/main/dashboard/DashboardAppConfig";
+import {AirDashboardAppConfig} from "app/main/airdashboard/AirDashboardAppConfig";
 import {BrandUsersLoginConfig} from "app/main/login/LoginConfig";
 import {LoginConfig} from "app/main/super-login/LoginConfig";
 import {RegisterConfig} from "app/main/register/RegisterConfig";
 import {Error404PageConfig} from "app/main/errors/Error404PageConfig";
 import {ReadingsAppConfig} from "app/main/reading/ReadingsAppConfig";
+import {AirAppConfig} from "app/main/air/AirAppConfig";
+import {GraphAppConfig} from "app/main/graph/GraphAppConfig";
+
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
 const routeConfigs = [
-    DashboardConfig,
+    DashboardAppConfig,
+    AirDashboardAppConfig,
     BrandUsersLoginConfig,
     LoginConfig,
     RegisterConfig,
     ReadingsAppConfig,
+    AirAppConfig,
+    GraphAppConfig,
     LogoutConfig,
     Error404PageConfig,
 ];
