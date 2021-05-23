@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// export const Base_URL = "http://3.133.18.163/api/";        //old=18.189.81.89         new=3.133.18.163          local=localhost
-export const Base_URL = "http://localhost:3000/";
-// export const Base_URL = "http://18.189.81.89:4000/";      //Development & testing
+//export const Base_URL = "http://localhost:3000/";
+export const Base_URL = "http://111.68.101.14:3000/";      //Development & testing
 
 const token = localStorage.getItem('jwtToken');
 axios.defaults.headers.common['Authorization'] = token;

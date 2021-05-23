@@ -11,8 +11,7 @@ import _ from "@lodash";
 
 class GraphHeader extends Component {
     state = {
-        nodeId: ""
-        
+        nodeId: 1
     };
     render() {
         const { graphs, mainTheme, searchReading } = this.props;
@@ -25,14 +24,14 @@ class GraphHeader extends Component {
                             animation="transition.expandIn"
                             delay={300}
                         >
-                            <Icon className="text-32 mr-12">euro_symbol</Icon>
+                            <Icon className="text-32 mr-12">charts</Icon>
                         </FuseAnimate>
                         <FuseAnimate
                             animation="transition.slideLeftIn"
                             delay={300}
                         >
                             <Typography variant="h6" className="hidden sm:flex">
-                                Graph Readings
+                                Graph
                             </Typography>
                         </FuseAnimate>
                     </div>
@@ -56,7 +55,6 @@ class GraphHeader extends Component {
                                             id="nodeId"
                                             name="nodeId"
                                         >
-                                            <option value="">All</option>
                                             <option value="1">Node 1</option>
                                             <option value="2">Node 2</option>
                                         </select>
@@ -66,6 +64,21 @@ class GraphHeader extends Component {
                         </div>
                     </div>
                     <div className="flex flex-1 items-center float-right justify-center pr-8 sm:px-12">
+                        {/* <Button
+                            style={{marginTop: 5}}
+                            variant="contained"
+                            color="secondary"
+                            onClick={() => {
+                                searchReading(this.state);
+                            }}
+                        >
+                            Apply
+                        </Button> */}
+                    </div>
+                </div>
+
+
+                    <div className="flex flex-1 items-center justify-center pr-8 sm:px-12">
                         <Button
                             style={{marginTop: 5}}
                             variant="contained"
@@ -77,30 +90,6 @@ class GraphHeader extends Component {
                             Apply
                         </Button>
                     </div>
-                </div>
-
-                {graphs && graphs.length > 0 ? (
-                    <div className="flex flex-1 items-center justify-center pr-8 sm:px-12">
-                        <MuiThemeProvider theme={mainTheme}>
-                            <FuseAnimate
-                                animation="transition.slideLeftIn"
-                                delay={300}
-                            >
-                                <CsvDownloader
-                                    datas={graphs}
-                                    filename="graphs"
-                                >
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                    >
-                                        Export to CSV
-                                    </Button>
-                                </CsvDownloader>
-                            </FuseAnimate>
-                        </MuiThemeProvider>
-                    </div>
-                ) : null}
             </div>
         );
     }

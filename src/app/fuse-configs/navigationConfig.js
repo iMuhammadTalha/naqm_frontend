@@ -52,13 +52,13 @@ const superAdminNavigationConfig = [
                 icon: 'whatshot',
                 url: '/air'
             },
-            // {
-            //     id: 'graph',
-            //     title: 'Graph',
-            //     type: 'item',
-            //     icon: 'whatshot',
-            //     url: '/graph'
-            // }
+            {
+                id: 'graph',
+                title: 'Graph',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/graph'
+            }
         ]
     },
     {
