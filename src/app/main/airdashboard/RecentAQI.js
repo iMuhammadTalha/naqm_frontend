@@ -40,7 +40,7 @@ class RecentAQI extends Component {
                         customSegmentStops={[0, 50, 150, 250, 500]}
                         segmentColors={['#3CCB47', '#f1c40f', '#e67e22', '#E84C3D']}
                         value={recentAQI}
-                        // currentValueText="AQI"
+                        currentValueText={'AQI: ${value}'}
                         // textColor={textColor}
                         />
                         </div>
