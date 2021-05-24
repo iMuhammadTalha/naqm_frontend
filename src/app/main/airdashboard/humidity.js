@@ -33,6 +33,7 @@ class humidity extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{humidity ? humidity : 0}</Typography>
+                        %
                     <Typography className="text-16" color="textSecondary"><h1>Humidity</h1></Typography>
                 </div>
             </Paper>

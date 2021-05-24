@@ -33,6 +33,7 @@ class temperature extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{temperature ? temperature : 0}</Typography>
+                        Celsius
                     <Typography className="text-16" color="textSecondary"><h1>Temperature</h1></Typography>
                 </div>
             </Paper>

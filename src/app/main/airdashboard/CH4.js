@@ -33,6 +33,8 @@ class ch4 extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{ch4 ? ch4 : 0}</Typography>
+                        ppm
+                    
                     <Typography className="text-16" color="textSecondary"><h1>CH4</h1></Typography>
                 </div>
             </Paper>

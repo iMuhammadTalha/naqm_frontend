@@ -34,6 +34,7 @@ class nh3 extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{nh3 ? nh3 : 0}</Typography>
+                        ppm
                     <Typography className="text-16" color="textSecondary"><h1>NH3</h1></Typography>
                 </div>
             </Paper>

@@ -33,6 +33,7 @@ class dust extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{dust ? dust : 0}</Typography>
+                        ug/m
                     <Typography className="text-16" color="textSecondary"><h1>Dust</h1></Typography>
                 </div>
             </Paper>

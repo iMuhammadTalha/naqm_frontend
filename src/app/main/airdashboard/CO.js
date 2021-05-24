@@ -33,6 +33,7 @@ class co extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{co ? co : 0}</Typography>
+                        ppm
                     <Typography className="text-16" color="textSecondary"><h1>CO</h1></Typography>
                 </div>
             </Paper>
