@@ -87,10 +87,8 @@
     "webpack-bundle-analyzer": "3.0.4"
   },
   "scripts": {
-    "start": "yarn run tailwind && cross-env NODE_PATH=src react-scripts start",
+    "start": "yarn run tailwind && cross-env NODE_PATH=src PORT=3001 react-scripts start",
     "build": "yarn run tailwind && node ./purge-tailwindcss.js && cross-env NODE_PATH=src GENERATE_SOURCEMAP=false react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "tailwind": "./node_modules/.bin/tailwind build ./src/styles/tailwind.base.css -c ./tailwind.js -o ./src/styles/tailwind.css",
     "test": "cross-env NODE_PATH=src react-scripts test --env=node",
     "eject": "cross-env NODE_PATH=src react-scripts eject",
