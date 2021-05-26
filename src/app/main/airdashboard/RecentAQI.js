@@ -21,14 +21,53 @@ class RecentAQI extends Component {
     refreshData = () => {
         this.props.getRecentAQI();
     };
-
+    getTrProps = (state, rowInfo, instance) => {
+        if (rowInfo) {
+          return {
+            style: {
+              background: rowInfo.row.Category == 'Healthy' ? 'green' : rowInfo.row.Category == 'Moderate' ? 'yellow' : rowInfo.row.Category == 'Dangerous' ? 'orange' : 'red',
+              color: 'white'
+            }
+          }
+        }
+        return {};
+      }
     render() {
-        const { openRideDetails, recentAQI } = this.props;
-
+        const {recentAQI } = this.props;
+        const data = [{
+            Category: 'Healthy',
+            AQI: '0-50',
+            color: '#3CCB47',
+            desciption: 'Air quality is considered satisfactory and air pollution poses little or no risk.'
+          }, {
+            Category: 'Moderate',
+            AQI: '50-150',
+            color: '#f1c40f',
+            desciption: 'Air quality is acceptable however for some pollutants there may be a moderate health concern for a very small number of people who are unusally sensitive to air pollution.'
+          }, {
+            Category: 'Dangerous',
+            AQI: '150-250',
+            color: '#e67e22',
+            desciption: 'Everyone may begin to experience health effects member of sensitive groups may experience more serious health effect.'
+          }, {
+            Category: 'Hazardous',
+            AQI: '250-500',
+            color: '#E84C3D',
+            desciption: 'Health warning of empergency conditions. The entire population is more likely to be affected.'
+          }]
+          const columns = [{
+            Header: 'Category',
+            accessor: 'Category',
+            className: 'justify-center font-bold'
+          }, {
+            Header: 'AQI',
+            accessor: 'AQI',
+            className: 'justify-center font-bold'
+          }];
         return (
             
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                    <div>
+                    {/* <div> */}
                     <ReactSpeedometer
                         needleHeightRatio={0.9}
                         maxSegmentLabels={5}
@@ -43,7 +82,18 @@ class RecentAQI extends Component {
                         currentValueText={'AQI: ${value}'}
                         // textColor={textColor}
                         />
-                        </div>
+                        <ReactTable
+                            data={data}
+                            columns={columns}
+                            defaultPageSize={4}
+                            className="-striped -highlight"
+                            showPaginationBottom={false}
+                            getTrProps={this.getTrProps}
+                            // trStyleCallback={ data => ( {color: data.row.Category=='Healthy' ? 'green' : 'red'} ) }
+
+                        />
+
+                    
             </div>
             
 
@@ -82,7 +132,7 @@ class RecentAQI extends Component {
 
             //     {/* <div className="p-8 pt-16 flex flex-row items-center">
             //         <Button onClick={this.openViewHandler}>
-            //             SHOW ALL RIDES
+            //             SHOW ALL Reading
             //         </Button>
             //     </div> */}
             // </Card>
