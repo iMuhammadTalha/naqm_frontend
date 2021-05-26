@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import ReactTable from "react-table";
 import * as Actions from "./store/actions";
+import "react-table/react-table.css";
 
 class AirList extends Component {
     state = {
@@ -56,41 +57,115 @@ class AirList extends Component {
                             Header: 'CH4',
                             accessor: 'ch4',
                             filterable: false,
-                            className: 'justify-center font-bold'
+                            className: 'justify-center font-bold',
+
+                            getProps: (state, rowInfo) => {
+                                if (rowInfo && rowInfo.row) {
+                                  return {
+                                    style: {
+                                      background:
+                                        rowInfo.row.ch4 < 50 ? "#3CCB47" : rowInfo.row.ch4 < 150 ? "#f1c40f": rowInfo.row.ch4 > 150 ? "#e67e22" : null
+                                    }
+                                  };
+                                } else {
+                                  return {};
+                                }
+                              },
                         },
                         {
                             Header: 'CO',
                             accessor: 'co',
                             filterable: false,
-                            className: 'justify-center font-bold'
+                            className: 'justify-center font-bold',
+                            getProps: (state, rowInfo) => {
+                                if (rowInfo && rowInfo.row) {
+                                  return {
+                                    style: {
+                                      background:
+                                        rowInfo.row.co < 4.4 ? "#3CCB47" : rowInfo.row.co < 6 ? "#f1c40f": rowInfo.row.co > 6 ? "#e67e22" : null
+                                    }
+                                  };
+                                } else {
+                                  return {};
+                                }
+                              },
                         },
                         {
                             Header: 'Dust',
                             accessor: 'dust',
                             filterable: false,
-                            className: 'justify-center font-bold'
+                            className: 'justify-center font-bold',
+                            getProps: (state, rowInfo) => {
+                                if (rowInfo && rowInfo.row) {
+                                  return {
+                                    style: {
+                                      background:
+                                        rowInfo.row.dust < 12 ? "#3CCB47" : rowInfo.row.dust < 55.4 ? "#f1c40f": rowInfo.row.dust > 55.4 ? "#e67e22" : null
+                                    }
+                                  };
+                                } else {
+                                  return {};
+                                }
+                              },
                         },
-                        {
-                            Header: 'Humidity',
-                            accessor: 'humidity',
-                            filterable: false,
-                            className: 'justify-center font-bold'
-                        },
+                        
                         {
                             Header: 'NH3',
                             accessor: 'nh3',
                             filterable: false,
-                            className: 'justify-center font-bold'
+                            className: 'justify-center font-bold',
+                            getProps: (state, rowInfo) => {
+                                if (rowInfo && rowInfo.row) {
+                                  return {
+                                    style: {
+                                      background:
+                                        rowInfo.row.nh3 < 200 ? "#3CCB47" : rowInfo.row.nh3 < 800 ? "#f1c40f": rowInfo.row.nh3 > 800 ? "#e67e22" : null
+                                    }
+                                  };
+                                } else {
+                                  return {};
+                                }
+                              },
                         },
                         {
                             Header: 'NO2',
                             accessor: 'no2',
                             filterable: false,
-                            className: 'justify-center font-bold'
+                            className: 'justify-center font-bold',
+                            getProps: (state, rowInfo) => {
+                                if (rowInfo && rowInfo.row) {
+                                  return {
+                                    style: {
+                                      background:
+                                        rowInfo.row.no2 < 0.053 ? "#3CCB47" : rowInfo.row.no2 < 0.36 ? "#f1c40f": rowInfo.row.no2 > 0.36 ? "#e67e22" : null
+                                    }
+                                  };
+                                } else {
+                                  return {};
+                                }
+                              },
                         },
                         {
                             Header: 'CO2',
                             accessor: 'co2',
+                            filterable: false,
+                            className: 'justify-center font-bold',
+                            getProps: (state, rowInfo) => {
+                                if (rowInfo && rowInfo.row) {
+                                  return {
+                                    style: {
+                                      background:
+                                        rowInfo.row.co2 < 1000 ? "#3CCB47" : rowInfo.row.co2 < 50000 ? "#f1c40f": rowInfo.row.co2 > 50000 ? "#e67e22" : null
+                                    }
+                                  };
+                                } else {
+                                  return {};
+                                }
+                              },
+                        },
+                        {
+                            Header: 'Humidity',
+                            accessor: 'humidity',
                             filterable: false,
                             className: 'justify-center font-bold'
                         },
