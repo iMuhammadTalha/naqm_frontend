@@ -25,7 +25,7 @@ class RecentAQI extends Component {
         if (rowInfo) {
           return {
             style: {
-              background: rowInfo.row.Category == 'Healthy' ? 'green' : rowInfo.row.Category == 'Moderate' ? 'yellow' : rowInfo.row.Category == 'Dangerous' ? 'orange' : 'red',
+              background: rowInfo.row.Category == 'Good' ? '#00E000' : rowInfo.row.Category == 'Moderate' ? '#FFFF00' : rowInfo.row.Category == 'Unhealthy for Sensitive' ? '#FF7600': rowInfo.row.Category == 'Unhealthy' ? '#FF0000': rowInfo.row.Category == 'Very Unhealthy' ? '#990049' : rowInfo.row.Category == 'Hazardous' ? '#7E0023' : '#3E0023',
               color: 'white'
             }
           }
@@ -35,29 +35,45 @@ class RecentAQI extends Component {
     render() {
         const {recentAQI } = this.props;
         const data = [{
-            Category: 'Healthy',
+            Category: 'Good',
             AQI: '0-50',
-            color: '#3CCB47',
+            color: '#00E000',
             desciption: 'Air quality is considered satisfactory and air pollution poses little or no risk.'
           }, {
             Category: 'Moderate',
-            AQI: '50-150',
-            color: '#f1c40f',
+            AQI: '50-100',
+            color: '#FFFF00',
             desciption: 'Air quality is acceptable however for some pollutants there may be a moderate health concern for a very small number of people who are unusally sensitive to air pollution.'
           }, {
-            Category: 'Dangerous',
-            AQI: '150-250',
-            color: '#e67e22',
+            Category: 'Unhealthy for Sensitive',
+            AQI: '100-150',
+            color: '#FF7600',
             desciption: 'Everyone may begin to experience health effects member of sensitive groups may experience more serious health effect.'
           }, {
+            Category: 'Unhealthy',
+            AQI: '150-200',
+            color: '#FF0000',
+            desciption: 'Health warning of empergency conditions. The entire population is more likely to be affected.'
+          }, {
+            Category: 'Very Unhealthy',
+            AQI: '200-300',
+            color: '#990049',
+            desciption: 'Health warning of empergency conditions. The entire population is more likely to be affected.'
+          }, {
             Category: 'Hazardous',
-            AQI: '250-500',
-            color: '#E84C3D',
+            AQI: '300-400',
+            color: '#7E0023',
+            desciption: 'Health warning of empergency conditions. The entire population is more likely to be affected.'
+          }, {
+            Category: 'Highly Dangerous',
+            AQI: '400-500',
+            color: '#3E0023',
             desciption: 'Health warning of empergency conditions. The entire population is more likely to be affected.'
           }]
           const columns = [{
             Header: 'Category',
             accessor: 'Category',
+            width: 170,
             className: 'justify-center font-bold'
           }, {
             Header: 'AQI',
@@ -76,8 +92,8 @@ class RecentAQI extends Component {
                         width={500}
                         height={300}
                         // customSegmentStops={[0, 500, 750, 900, 1000]}
-                        customSegmentStops={[0, 50, 150, 250, 500]}
-                        segmentColors={['#3CCB47', '#f1c40f', '#e67e22', '#E84C3D']}
+                        customSegmentStops={[0, 50, 100, 150, 200, 300, 400, 500]}
+                        segmentColors={['#00E000', '#FFFF00', '#FF7600', '#FF0000', '#990049', '#7E0023', '#3E0023']}
                         value={recentAQI}
                         currentValueText={'AQI: ${value}'}
                         // textColor={textColor}
@@ -85,7 +101,7 @@ class RecentAQI extends Component {
                         <ReactTable
                             data={data}
                             columns={columns}
-                            defaultPageSize={4}
+                            defaultPageSize={7}
                             className="-striped -highlight"
                             showPaginationBottom={false}
                             getTrProps={this.getTrProps}
