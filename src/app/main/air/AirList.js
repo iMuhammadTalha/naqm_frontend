@@ -64,7 +64,7 @@ class AirList extends Component {
                                   return {
                                     style: {
                                       background:
-                                        rowInfo.row.ch4 < 50 ? "#3CCB47" : rowInfo.row.ch4 < 150 ? "#f1c40f": rowInfo.row.ch4 > 150 ? "#e67e22" : null
+                                        rowInfo.row.ch4 < 50 ? "#00E000" : rowInfo.row.ch4 < 100 ? "#FFFF00": rowInfo.row.ch4 < 150 ? "#FF7600": rowInfo.row.ch4 < 200 ? "#FF0000": rowInfo.row.ch4 < 300 ? "#990049": rowInfo.row.ch4 < 400 ? "#7E0023": rowInfo.row.ch4 > 400 ? "#3E0023" : null
                                     }
                                   };
                                 } else {
@@ -82,7 +82,7 @@ class AirList extends Component {
                                   return {
                                     style: {
                                       background:
-                                        rowInfo.row.co < 4.4 ? "#3CCB47" : rowInfo.row.co < 6 ? "#f1c40f": rowInfo.row.co > 6 ? "#e67e22" : null
+                                      rowInfo.row.co < 4.4 ? "#00E000" : rowInfo.row.co < 9.4 ? "#FFFF00": rowInfo.row.co < 12.4 ? "#FF7600": rowInfo.row.co < 15.4 ? "#FF0000": rowInfo.row.co < 30.4 ? "#990049": rowInfo.row.co < 40.4 ? "#7E0023": rowInfo.row.co > 40.4 ? "#3E0023" : null
                                     }
                                   };
                                 } else {
@@ -100,8 +100,8 @@ class AirList extends Component {
                                   return {
                                     style: {
                                       background:
-                                        rowInfo.row.dust < 12 ? "#3CCB47" : rowInfo.row.dust < 55.4 ? "#f1c40f": rowInfo.row.dust > 55.4 ? "#e67e22" : null
-                                    }
+                                      rowInfo.row.dust < 12 ? "#00E000" : rowInfo.row.dust < 35.4 ? "#FFFF00": rowInfo.row.dust < 55.4 ? "#FF7600": rowInfo.row.dust < 150.4 ? "#FF0000": rowInfo.row.dust < 250.4 ? "#990049": rowInfo.row.dust < 350.4 ? "#7E0023": rowInfo.row.dust > 350.4 ? "#3E0023" : null  
+                                      }
                                   };
                                 } else {
                                   return {};
@@ -119,7 +119,7 @@ class AirList extends Component {
                                   return {
                                     style: {
                                       background:
-                                        rowInfo.row.nh3 < 200 ? "#3CCB47" : rowInfo.row.nh3 < 800 ? "#f1c40f": rowInfo.row.nh3 > 800 ? "#e67e22" : null
+                                      rowInfo.row.nh3 < 200 ? "#00E000" : rowInfo.row.nh3 < 400 ? "#FFFF00": rowInfo.row.nh3 < 800 ? "#FF7600": rowInfo.row.nh3 < 1200 ? "#FF0000": rowInfo.row.nh3 < 1800 ? "#990049": rowInfo.row.nh3 < 2000 ? "#7E0023": rowInfo.row.nh3 > 2000 ? "#3E0023" : null  
                                     }
                                   };
                                 } else {
@@ -137,7 +137,7 @@ class AirList extends Component {
                                   return {
                                     style: {
                                       background:
-                                        rowInfo.row.no2 < 0.053 ? "#3CCB47" : rowInfo.row.no2 < 0.36 ? "#f1c40f": rowInfo.row.no2 > 0.36 ? "#e67e22" : null
+                                      rowInfo.row.no2 < 0.053 ? "#00E000" : rowInfo.row.no2 < 0.1 ? "#FFFF00": rowInfo.row.no2 < 0.36 ? "#FF7600": rowInfo.row.no2 < 0.65 ? "#FF0000": rowInfo.row.no2 < 1.24 ? "#990049": rowInfo.row.no2 <= 1.64 ? "#7E0023": rowInfo.row.no2 > 1.64 ? "#3E0023" : null  
                                     }
                                   };
                                 } else {
@@ -155,8 +155,8 @@ class AirList extends Component {
                                   return {
                                     style: {
                                       background:
-                                        rowInfo.row.co2 < 1000 ? "#3CCB47" : rowInfo.row.co2 < 50000 ? "#f1c40f": rowInfo.row.co2 > 50000 ? "#e67e22" : null
-                                    }
+                                      rowInfo.row.co2 < 1000 ? "#00E000" : rowInfo.row.co2 < 2000 ? "#FFFF00": rowInfo.row.co2 < 5000 ? "#FF7600": rowInfo.row.co2 < 10000 ? "#FF0000": rowInfo.row.co2 < 20000 ? "#990049": rowInfo.row.co2 <= 40000 ? "#7E0023": rowInfo.row.co2 > 40000 ? "#3E0023" : null  
+                                      }
                                   };
                                 } else {
                                   return {};
