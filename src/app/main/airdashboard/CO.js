@@ -22,7 +22,7 @@ class co extends Component {
     render() {
         const { co } = this.props;
         return (
-            <Paper className="w-full rounded-8 border-1" style={co<4.4 ? {backgroundColor:"#3CCB47"} : co<6 ? {backgroundColor:"#f1c40f"} : co>6 ? {backgroundColor:"#e67e22"} : {} }>
+            <Paper className="w-full rounded-8 border-1" style={co<4.4 ? {backgroundColor:"#00E000"} : co<9.4 ? {backgroundColor:"#FFFF00"} : co<12.4 ? {backgroundColor:"#FF7600"} : co<15.4 ? {backgroundColor:"#FF0000"} : co<30.4 ? {backgroundColor:"#990049"} : co<40.4 ? {backgroundColor:"#7E0023"} : co>40.4 ? {backgroundColor:"#3E0023"} : {} }>
                 {this.props.user.role[0] !== "fleet" &&
                 <div className="flex items-center justify-end pr-4 pl-16 pt-4">
                     <IconButton aria-label="more" onClick={this.refreshData}>

@@ -21,12 +21,12 @@ class AirHeader extends Component {
             <div className="flex flex-1 items-center justify-between p-8 sm:p-24">
                 <div className="flex flex-shrink items-center sm:w-224">
                     <div className="flex items-center">
-                        <FuseAnimate
+                        {/* <FuseAnimate
                             animation="transition.expandIn"
                             delay={300}
                         >
                             <Icon className="text-32 mr-12">euro_symbol</Icon>
-                        </FuseAnimate>
+                        </FuseAnimate> */}
                         <FuseAnimate
                             animation="transition.slideLeftIn"
                             delay={300}

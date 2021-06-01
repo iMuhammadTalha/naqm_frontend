@@ -23,7 +23,7 @@ class nh3 extends Component {
         const { nh3 } = this.props;
         console.log('NH3',nh3);
         return (
-            <Paper className="w-full rounded-8 border-1" style={nh3<200 ? {backgroundColor:"#3CCB47"} : nh3<800 ? {backgroundColor:"#f1c40f"} : nh3>800 ? {backgroundColor:"#e67e22"} : {} }>
+            <Paper className="w-full rounded-8 border-1" style={nh3<200 ? {backgroundColor:"#00E000"} : nh3<400 ? {backgroundColor:"#FFFF00"} : nh3<800 ? {backgroundColor:"#FF7600"} : nh3<1200 ? {backgroundColor:"#FF0000"} : nh3<1800 ? {backgroundColor:"#990049"} : nh3<2000 ? {backgroundColor:"#7E0023"} : nh3>2000 ? {backgroundColor:"#3E0023"} : {} }>
                 {this.props.user.role[0] !== "fleet" &&
                 <div className="flex items-center justify-end pr-4 pl-16 pt-4">
                     <IconButton aria-label="more" onClick={this.refreshData}>

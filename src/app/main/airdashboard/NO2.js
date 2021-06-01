@@ -22,7 +22,7 @@ class NO2 extends Component {
     render() {
         const { no2 } = this.props;
         return (                                                                      // {backgroundColor: no2<0.053 ? "#f1c40f" : 0 }}
-            <Paper className="w-full rounded-8 border-1" style={no2<0.053 ? {backgroundColor:"#3CCB47"} : no2<0.36 ? {backgroundColor:"#f1c40f"} : no2>0.36 ? {backgroundColor:"#e67e22"} : {} } >
+            <Paper className="w-full rounded-8 border-1" style={no2<0.053 ? {backgroundColor:"#00E000"} : no2<0.1 ? {backgroundColor:"#FFFF00"} : no2<0.36 ? {backgroundColor:"#FF7600"} : no2<0.65 ? {backgroundColor:"#FF0000"} : no2<1.24 ? {backgroundColor:"#990049"} : no2<1.64 ? {backgroundColor:"#7E0023"} : no2>1.64 ? {backgroundColor:"#3E0023"} : {} } >
                 {this.props.user.role[0] !== "fleet" &&
                 <div className="flex items-center justify-end pr-4 pl-16 pt-4">
                     <IconButton aria-label="more" onClick={this.refreshData}>

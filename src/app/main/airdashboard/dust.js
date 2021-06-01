@@ -22,7 +22,7 @@ class dust extends Component {
     render() {
         const { dust } = this.props;
         return (
-            <Paper className="w-full rounded-8 border-1" style={dust<12 ? {backgroundColor:"#3CCB47"} : dust<55.4 ? {backgroundColor:"#f1c40f"} : dust>55.4 ? {backgroundColor:"#e67e22"} : {} }>
+            <Paper className="w-full rounded-8 border-1" style={dust<12 ? {backgroundColor:"#00E000"} : dust<35.4 ? {backgroundColor:"#FFFF00"} : dust<55.4 ? {backgroundColor:"#FF7600"} : dust<150.4 ? {backgroundColor:"#FF0000"} : dust<250.4 ? {backgroundColor:"#990049"} : dust<350.4 ? {backgroundColor:"#7E0023"} : dust>350.4 ? {backgroundColor:"#3E0023"} : {} }>
                 {this.props.user.role[0] !== "fleet" &&
                 <div className="flex items-center justify-end pr-4 pl-16 pt-4">
                     <IconButton aria-label="more" onClick={this.refreshData}>

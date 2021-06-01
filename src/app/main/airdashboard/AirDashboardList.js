@@ -17,6 +17,7 @@ import CO2 from "./CO2"
 import Dust from "./dust"
 import Humidity from "./humidity";
 import Temperature from "./temperature"
+import Legend from "./legend";
 
 class AirDashboardList extends Component {
     state = {
@@ -83,6 +84,12 @@ class AirDashboardList extends Component {
                     </div>
                     <div className="widget flex w-full sm:w-1/2 md:w-2/4 p-12">
                         <Humidity />
+                    </div>
+
+                    <div className="mb-16 w-full">
+                        <div className="widget w-full p-16">
+                            <Legend />
+                        </div>
                     </div>
                 </FuseAnimateGroup>
             
