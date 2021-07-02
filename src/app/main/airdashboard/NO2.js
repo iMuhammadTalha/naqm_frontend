@@ -33,8 +33,8 @@ class NO2 extends Component {
                 <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
                     <Typography
                         className="text-56 leading-none text-purple-dark">{no2 ? no2 : 0}</Typography>
-                        ppm
-                    <Typography className="text-16" color="textSecondary"><h1>NO2</h1></Typography>
+                        <Typography style={ no2>1.24 ? { color: '#FFFFFF' } : {}}>ppm</Typography>
+                    <Typography className="text-16" color="textSecondary" style={ no2>1.24 ? { color: '#FFFFFF' } : {}}><h1>NO2</h1></Typography>
                 </div>
             </Paper>
         );
