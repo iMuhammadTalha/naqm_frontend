@@ -12,6 +12,7 @@ import {Error404PageConfig} from "app/main/errors/Error404PageConfig";
 import {ReadingsAppConfig} from "app/main/reading/ReadingsAppConfig";
 import {AirAppConfig} from "app/main/air/AirAppConfig";
 import {GraphAppConfig} from "app/main/graph/GraphAppConfig";
+import {GraphPredictionAppConfig} from "app/main/graph-prediction/GraphPredictionAppConfig";
 
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
@@ -24,6 +25,7 @@ const routeConfigs = [
     ReadingsAppConfig,
     AirAppConfig,
     GraphAppConfig,
+    GraphPredictionAppConfig,
     LogoutConfig,
     Error404PageConfig,
 ];

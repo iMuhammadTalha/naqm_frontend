@@ -58,6 +58,13 @@ const superAdminNavigationConfig = [
                 type: 'item',
                 icon: 'whatshot',
                 url: '/graph'
+            },
+            {
+                id: 'graphPrediction',
+                title: 'Graph Predictions',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/graph-prediction'
             }
         ]
     },
