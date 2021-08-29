@@ -350,7 +350,7 @@ class GraphList extends Component {
                                         labels: dates,
                                         datasets: [
                                         {
-                                            label: 'Humitidy',
+                                            label: 'Humidity',
                                             fill: false,
                                             lineTension: 0.5,
                                             backgroundColor: 'rgba(75,192,192,1)',
@@ -363,7 +363,7 @@ class GraphList extends Component {
                                     options={{
                                         title:{
                                         display:true,
-                                        text:'Humitidy',
+                                        text:'Humidity',
                                         fontSize:15
                                         },
                                         legend:{

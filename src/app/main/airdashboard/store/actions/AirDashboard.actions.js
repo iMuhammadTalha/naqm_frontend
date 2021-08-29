@@ -1,4 +1,5 @@
 /** @format */
+import moment from "moment";
 
 import axios from "axios";
 import { Base_URL } from "../../../../server";
@@ -73,6 +74,8 @@ export const getARecentReading = () => (dispatch) => {
     axios
         .get(Base_URL + querys)
         .then((res) => {
+            // console.log(res.data.created_time)
+            // console.log(moment(res.data.created_time).fromNow())
             dispatch({
                 type: GET_A_RECENT_READING,
                 payload: res.data
