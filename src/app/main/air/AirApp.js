@@ -26,6 +26,9 @@ class AirApp extends Component {
     }
 
     render() {
+        if (!localStorage.getItem("jwtToken")) {
+            window.location = "/login";
+        }
         return (
             <React.Fragment>
                 <FusePageSimple
