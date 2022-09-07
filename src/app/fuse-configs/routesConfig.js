@@ -13,6 +13,8 @@ import {ReadingsAppConfig} from "app/main/reading/ReadingsAppConfig";
 import {AirAppConfig} from "app/main/air/AirAppConfig";
 import {GraphAppConfig} from "app/main/graph/GraphAppConfig";
 import {GraphPredictionAppConfig} from "app/main/graph-prediction/GraphPredictionAppConfig";
+import {LiveStockGraphAppConfig} from "app/main/livestock-graph/GraphAppConfig";
+import {LiveStockDataAppConfig} from "app/main/livestock-data/AirAppConfig";
 
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
@@ -28,6 +30,8 @@ const routeConfigs = [
     GraphPredictionAppConfig,
     LogoutConfig,
     Error404PageConfig,
+    LiveStockGraphAppConfig,
+    LiveStockDataAppConfig
 ];
 
 const routes = [

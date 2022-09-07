@@ -27,7 +27,7 @@ if (token) {
 const superAdminNavigationConfig = [
     {
         id: 'Readings',
-        title: 'NAQM Reading',
+        title: 'Air Reading',
         type: 'group',
         icon: 'whatshot',
         children: [
@@ -47,14 +47,14 @@ const superAdminNavigationConfig = [
             },
             {
                 id: 'air',
-                title: 'Air Readings',
+                title: 'Air Data',
                 type: 'item',
                 icon: 'whatshot',
                 url: '/air'
             },
             {
                 id: 'graph',
-                title: 'Graph',
+                title: 'Air Graph',
                 type: 'item',
                 icon: 'whatshot',
                 url: '/graph'
@@ -66,6 +66,28 @@ const superAdminNavigationConfig = [
                 icon: 'whatshot',
                 url: '/graph-prediction'
             }
+        ]
+    },
+    {
+        id: 'Readings',
+        title: 'Livestock Reading',
+        type: 'group',
+        icon: 'whatshot',
+        children: [
+            {
+                id: 'animal',
+                title: 'Livestock Data',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/livestock-data'
+            },
+            {
+                id: 'graph',
+                title: 'Livestock Graph',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/livestock-graph'
+            },
         ]
     },
     {
