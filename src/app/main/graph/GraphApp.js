@@ -14,6 +14,9 @@ import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
+import Header from "../index/Header";
+import Footer from "../index/Footer";
+
 class GraphApp extends Component {
     componentDidMount() {
         this.props.getAllGraphs();
@@ -26,23 +29,15 @@ class GraphApp extends Component {
     }
 
     render() {
-        if (!localStorage.getItem("jwtToken")) {
-            window.location = "/login";
-        }
+        // if (!localStorage.getItem("jwtToken")) {
+        //     window.location = "/login";
+        // }
         return (
-            <React.Fragment>
-                <FusePageSimple
-                    header={
-                        <GraphHeader pageLayout={() => this.pageLayout}/>
-                    }
-                    content={<GraphList/>}
-                    sidebarInner
-                    onRef={(instance) => {
-                        this.pageLayout = instance;
-                    }}
-                    innerScroll={false}
-                />
-            </React.Fragment>
+            <div>
+                <Header />
+                    <GraphList/>
+                <Footer />
+            </div>     
         );
     }
 }

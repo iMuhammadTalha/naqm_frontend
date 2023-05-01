@@ -3,6 +3,7 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
 import {FuseUtils} from "@fuse/index";
+import {IndexConfig} from "app/main/index/IndexConfig";
 import {DashboardAppConfig} from "app/main/dashboard/DashboardAppConfig";
 import {AirDashboardAppConfig} from "app/main/airdashboard/AirDashboardAppConfig";
 import {BrandUsersLoginConfig} from "app/main/login/LoginConfig";
@@ -19,6 +20,7 @@ import {LiveStockDataAppConfig} from "app/main/livestock-data/AirAppConfig";
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
 const routeConfigs = [
+    IndexConfig,
     DashboardAppConfig,
     AirDashboardAppConfig,
     BrandUsersLoginConfig,

@@ -1,9 +1,8 @@
-/** @format */
+import Index from './Index';
+import {authRoles} from 'app/auth';
+import IndexApp from './IndexApp';
 
-import AirDashboardApp from "./AirDashboardApp";
-import {authRoles} from "app/auth";
-
-export const AirDashboardAppConfig = {
+export const IndexConfig = {
     settings: {
         layout: {
             config: {
@@ -25,10 +24,11 @@ export const AirDashboardAppConfig = {
             }
         }
     },
+    auth: authRoles.onlyGuest,
     routes: [
         {
-            path: "/airdashboard",
-            component: AirDashboardApp,
-        },
-    ],
+            path: '/index',
+            component: IndexApp
+        }
+    ]
 };

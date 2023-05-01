@@ -6,6 +6,7 @@ import { bindActionCreators } from "redux";
 import * as Actions from "./store/actions";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
+import Emoji from 'reactjs-emojis';
 
 class ch4 extends Component {
 
@@ -26,9 +27,11 @@ class ch4 extends Component {
                 <div className="flex items-center pr-4 pl-16 pt-4">
                 {/* <h3>{ch4<50 ? 'Good' : ch4<150 ? 'Moderator' : ch4>150 ? 'Danger' : {}}</h3> */}
                 </div>
-                <div className="flex items-center justify-end pr-4 pl-16 pt-4">
+                <div className="flex items-center justify-center pr-4 pl-16 pt-4">
                     <IconButton aria-label="more" onClick={this.refreshData}>
-                        <Icon>refresh</Icon>
+                    {ch4<50 ? <Emoji name="smiley" size="30"/> : ch4<100 ? <Emoji name="blush" size="30"/> : ch4<150 ? <Emoji name="neutral_face" size="30"/> : ch4<200 ? <Emoji name="worried" size="30"/> : ch4<300 ? <Emoji name="fearful" size="30"/> : ch4<400 ? <Emoji name="disappointed_relieved" size="30"/> : ch4>400 ? <Emoji name="sob" size="30"/> : {} } 
+                    {/* {ch4<50 ? <Emoji name="smiley" size="30"/> : ch4<150 ? <Emoji name="satisfied" size="30"/> : ch4>150 ? <Emoji name="cry" size="30"/> : {}} */}
+                    
                     </IconButton>
                 </div>
                 

@@ -8,38 +8,35 @@ import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import withReducer from "app/store/withReducer";
 import _ from "@lodash";
-import AirList from "./AirList";
-import AirHeader from "./AirHeader";
+// import AirDashboardList from "./AirDashboardList";
 import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
-import Header from "../index/Header";
-import Footer from "../index/Footer";
+import Index from "./Index";
 
-class AirApp extends Component {
+class IndexApp extends Component {
     componentDidMount() {
+        this.props.getAllGraphs();
+        this.props.getRecentAQI();
+        this.props.getARecentReading();
         this.props.getAllAirs();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (!_.isEqual(this.props.location, prevProps.location)) {
+            this.props.getRecentAQI();
+            this.props.getARecentReading();
             this.props.getAllAirs();
+            this.props.getAllGraphs();
         }
     }
 
     render() {
-        // if (!localStorage.getItem("jwtToken")) {
-        //     window.location = "/login";
-        // }
         return (
+            <Index>
 
-            <div>
-                <Header />
-                    <AirList/>
-                <Footer />
-            </div>
-
+            </Index>
         );
     }
 }
@@ -47,23 +44,26 @@ class AirApp extends Component {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(
         {
-            getAllAirs: Actions.getAllAirs
+            getARecentReading: Actions.getARecentReading,
+            getRecentAQI: Actions.getRecentAQI,
+            getAllAirs: Actions.getAllAirs,
+            getAllGraphs: Actions.getAllGraphs
         },
         dispatch
     );
 }
 
-function mapStateToProps({AirApp}) {
+function mapStateToProps({IndexApp}) {
     return {
-        airs: AirApp.AirReducer.entities
+        airdashboards: IndexApp.IndexReducer.entities
     };
 }
 
 export default withReducer(
-    "AirApp",
+    "IndexApp",
     reducer
 )(
     withStyles({withTheme: true})(
-        withRouter(connect(mapStateToProps, mapDispatchToProps)(AirApp))
+        withRouter(connect(mapStateToProps, mapDispatchToProps)(IndexApp))
     )
 );

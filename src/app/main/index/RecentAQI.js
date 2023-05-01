@@ -165,10 +165,9 @@ function mapDispatchToProps(dispatch) {
     );
 }
 
-function mapStateToProps({ AirDashboardApp }) {
-    // console.log('AVBFDDD',AirDashboardApp.AirDashboardReducer.recentAQI)
+function mapStateToProps({ IndexApp }) {
     return {
-        recentAQI: 0 //AirDashboardApp.AirDashboardReducer.recentAQI.aqi
+        recentAQI: IndexApp.IndexReducer.recentAQI.aqi
     };
 }
 

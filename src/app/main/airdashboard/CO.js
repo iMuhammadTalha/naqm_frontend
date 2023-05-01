@@ -6,6 +6,7 @@ import { bindActionCreators } from "redux";
 import * as Actions from "./store/actions";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
+import Emoji from 'reactjs-emojis';
 
 class co extends Component {
 
@@ -24,9 +25,9 @@ class co extends Component {
         return (
             <Paper className="w-full rounded-8 border-1" style={co<4.4 ? {backgroundColor:"#00E000"} : co<9.4 ? {backgroundColor:"#FFFF00"} : co<12.4 ? {backgroundColor:"#FF7600"} : co<15.4 ? {backgroundColor:"#FF0000"} : co<30.4 ? {backgroundColor:"#990049"} : co<40.4 ? {backgroundColor:"#7E0023"} : co>40.4 ? {backgroundColor:"#3E0023"} : {} }>
                 {this.props.user.role[0] !== "fleet" &&
-                <div className="flex items-center justify-end pr-4 pl-16 pt-4">
+                <div className="flex items-center justify-center pr-4 pl-16 pt-4">
                     <IconButton aria-label="more" onClick={this.refreshData}>
-                        <Icon>refresh</Icon>
+                        {co<4.4 ? <Emoji name="smiley" size="30"/> : co<9.4 ? <Emoji name="blush" size="30"/> : co<12.4 ? <Emoji name="neutral_face" size="30"/> : co<15.4 ? <Emoji name="worried" size="30"/> : co<30.4 ? <Emoji name="fearful" size="30"/> : co<40.4 ? <Emoji name="disappointed_relieved" size="30"/> : co>40.4 ? <Emoji name="sob" size="30"/> : {} } 
                     </IconButton>
                 </div>
                 }

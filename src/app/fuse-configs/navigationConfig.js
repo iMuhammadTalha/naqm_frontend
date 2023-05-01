@@ -39,6 +39,13 @@ const superAdminNavigationConfig = [
             //     url: '/dashboard'
             // },
             {
+                id: 'index',
+                title: 'Index',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/index'
+            },
+            {
                 id: 'airdashboard',
                 title: 'Dashbaord',
                 type: 'item',

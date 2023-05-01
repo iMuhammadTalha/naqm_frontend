@@ -14,6 +14,9 @@ import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
+import Header from "../index/Header";
+import Footer from "../index/Footer";
+
 class AirDashboardApp extends Component {
     componentDidMount() {
         this.props.getRecentAQI();
@@ -32,19 +35,11 @@ class AirDashboardApp extends Component {
             window.location = "/login";
         }
         return (
-            <React.Fragment>
-                <FusePageSimple
-                    header={
-                        <AirDashboardHeader pageLayout={() => this.pageLayout}/>
-                    }
-                    content={<AirDashboardList/>}
-                    sidebarInner
-                    onRef={(instance) => {
-                        this.pageLayout = instance;
-                    }}
-                    innerScroll={false}
-                />
-            </React.Fragment>
+            <div>
+                <Header />
+                    <AirDashboardList/>
+                <Footer />
+            </div> 
         );
     }
 }
