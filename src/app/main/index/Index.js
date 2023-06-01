@@ -52,27 +52,8 @@ class Index extends Component {
                 <Header />
             
             <div className="w-full p-12">
-    <div className="flex flex-wrap mb-16">
-        <div className="widget w-full p-16">
-            <RecentAQI />
-        </div>
-    </div>
 
-    <div className="flex flex-wrap mb-16">
-  <div className="w-full md:w-1/2 p-16">
-    <div className="widget">
-      <AirList />
-    </div>
-  </div>
-  <div className="w-full md:w-1/2 p-16">
-    <div className="widget">
-      <GraphList />
-    </div>
-  </div>
-</div>
-
-
-    <div className="flex flex-wrap flex-row">
+            <div className="flex flex-wrap flex-row">
     {/* <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
         <Temperature />
     </div> */}
@@ -97,7 +78,31 @@ class Index extends Component {
     {/* <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
         <Humidity />
     </div>         */}
+    </div>
+
+    <div className="flex flex-wrap mb-16">
+        <div className="widget w-full p-1">
+            <RecentAQI />
+        </div>
+    </div>
+
+    
+
+    <div className="flex flex-wrap mb-16">
+  <div className="w-full md:w-1/2 p-1">
+    <div className="widget">
+      <AirList />
+    </div>
+  </div>
+  <div className="w-full md:w-1/2 p-1">
+    <div className="widget">
+      <GraphList />
+    </div>
+  </div>
 </div>
+
+
+    
 
 
     {/* <div className="flex flex-wrap mb-16">

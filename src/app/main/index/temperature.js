@@ -23,17 +23,11 @@ class temperature extends Component {
         const { temperature } = this.props;
         return (
             <Paper className="w-full rounded-8 border-1" >
-                <div className="flex items-center justify-end pr-4 pl-16 pt-4">
-                    <IconButton aria-label="more" onClick={this.refreshData}>
-                        <Icon>refresh</Icon>
-                    </IconButton>
-                </div>
-                
-                <div className="text-center pt-12 pb-28" style={{overflow: "auto"}}>
+<div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
                     <Typography
-                        className="text-56 leading-none text-purple-dark">{temperature ? temperature : 0}</Typography>
+                        className="text-24 leading-none text-purple-dark">{temperature ? temperature : 0}</Typography>
                         Celsius
-                    <Typography className="text-16" color="textSecondary"><h1>Temperature</h1></Typography>
+                    <Typography className="text-12" color="textSecondary"><h3>Temperature</h3></Typography>
                 </div>
             </Paper>
         );

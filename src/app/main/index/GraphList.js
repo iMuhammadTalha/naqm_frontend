@@ -21,7 +21,6 @@ class GraphList extends Component {
     }
 
     handleGraphChange = (event) => {
-        console.log('Change', event.target.value)
         this.setState({
             selectedGraph: event.target.value,
         });
@@ -35,7 +34,6 @@ class GraphList extends Component {
 
         switch (selectedGraph) {
             case 'AQI':
-                console.log('AQI CASE')
                 data = [
                     {
                         label: 'AQI',
@@ -49,7 +47,6 @@ class GraphList extends Component {
                 ];
                 break;
             case 'NH3':
-                console.log('NH3 CASE')
                 data = [
                     {
                         label: 'NH3',
@@ -62,7 +59,97 @@ class GraphList extends Component {
                     }
                 ];
                 break;
-            // Add cases for other graphs here
+                case 'CO':
+                    data = [
+                        {
+                            label: 'CO',
+                            fill: false,
+                            lineTension: 0.5,
+                            backgroundColor: 'rgba(75,192,192,1)',
+                            borderColor: 'rgba(0,0,0,1)',
+                            borderWidth: 2,
+                            data: coAvg
+                        }
+                    ];
+                    break;
+                    case 'NO2':
+                    data = [
+                        {
+                            label: 'NO2',
+                            fill: false,
+                            lineTension: 0.5,
+                            backgroundColor: 'rgba(75,192,192,1)',
+                            borderColor: 'rgba(0,0,0,1)',
+                            borderWidth: 2,
+                            data: no2Avg
+                        }
+                    ];
+                    break;
+                    case 'CH4':
+                        data = [
+                            {
+                                label: 'CH4',
+                                fill: false,
+                                lineTension: 0.5,
+                                backgroundColor: 'rgba(75,192,192,1)',
+                                borderColor: 'rgba(0,0,0,1)',
+                                borderWidth: 2,
+                                data: ch4Avg
+                            }
+                        ];
+                        break;
+                        case 'CO2':
+                            data = [
+                                {
+                                    label: 'CO2',
+                                    fill: false,
+                                    lineTension: 0.5,
+                                    backgroundColor: 'rgba(75,192,192,1)',
+                                    borderColor: 'rgba(0,0,0,1)',
+                                    borderWidth: 2,
+                                    data: co2Avg
+                                }
+                            ];
+                            break;
+                            case 'Dust':
+                            data = [
+                                {
+                                    label: 'Dust',
+                                    fill: false,
+                                    lineTension: 0.5,
+                                    backgroundColor: 'rgba(75,192,192,1)',
+                                    borderColor: 'rgba(0,0,0,1)',
+                                    borderWidth: 2,
+                                    data: dustAvg
+                                }
+                            ];
+                            break;
+                            case 'Humidity':
+                            data = [
+                                {
+                                    label: 'Humidity',
+                                    fill: false,
+                                    lineTension: 0.5,
+                                    backgroundColor: 'rgba(75,192,192,1)',
+                                    borderColor: 'rgba(0,0,0,1)',
+                                    borderWidth: 2,
+                                    data: humitidyAvg
+                                }
+                            ];
+                            break;
+                            case 'Temperature':
+                            data = [
+                                {
+                                    label: 'Temperature',
+                                    fill: false,
+                                    lineTension: 0.5,
+                                    backgroundColor: 'rgba(75,192,192,1)',
+                                    borderColor: 'rgba(0,0,0,1)',
+                                    borderWidth: 2,
+                                    data: temperatureAvg
+                                }
+                            ];
+                            break;
             default:
                 data = [
                     {
@@ -84,54 +171,58 @@ class GraphList extends Component {
         if (!Array.isArray(data)) {
             data=[]
         }
-console.log('data', data)
         return (
             <div className="w-full p-12">
                 <div className="mb-16 w-full">
                     <div className="widget w-full p-16">
-                        <Paper className="w-full rounded-8 border-1">
-                            <div className="flex items-center justify-between mb-8">
-                                <h2>{selectedGraph}</h2>
-                                <div>
-                                    <label htmlFor="graph-select">Select a graph:</label>
-                                    <select id="graph-select" value={selectedGraph} onChange={this.handleGraphChange}>
-                                        <option value="AQI">AQI</option>
-                                        <option value="NH3">NH3</option>
-                                        {/* Add options for other graphs here */}
-                                    </select>
-                                </div>
-                            </div>
-                            <Line
-                                data={{
-                                    labels: dates,
-                                    datasets: data,
-                                }}
-                                options={{
-                                    title: {
-                                        display: true,
-                                        text: selectedGraph,
-                                        fontSize: 15,
-                                    },
-                                    legend: {
-                                        display: true,
-                                        position: 'right',
-                                    },
-                                    scales: {
-                                        yAxes: [
-                                            {
-                                                display: true,
-                                                ticks: {
-                                                    suggestedMin: 0, // minimum will be 0, unless there is a lower value.
-                                                    // OR //
-                                                    beginAtZero: true, // minimum value will be 0.
-                                                    suggestedMax: 500,
-                                                },
-                                            },
-                                        ],
-                                    },
-                                }}
-                            />
-                        </Paper>
+                    <Paper className="w-full rounded-8 border-1">
+  <div className="flex items-center justify-between mb-8">
+    <div className="flex items-center" style={{margin: "auto", marginTop: '1%'}}>
+      <label htmlFor="graph-select" className="mr-2">Select a graph:</label>
+      <select id="graph-select" value={selectedGraph} onChange={this.handleGraphChange} className="border border-gray-300 rounded-md px-2 py-1">
+        <option value="AQI">AQI</option>
+        <option value="NH3">NH3</option>
+        <option value="CO">CO</option>
+        <option value="NO2">NO2</option>
+        <option value="CH4">CH4</option>
+        <option value="CO2">CO2</option>
+        <option value="Dust">Dust</option>
+        <option value="Humitidy">Humitidy</option>
+        <option value="Temperature">Temperature</option>
+      </select>
+    </div>
+  </div>
+  <Line
+    data={{
+      labels: dates,
+      datasets: data,
+    }}
+    options={{
+      title: {
+        display: true,
+        text: selectedGraph,
+        fontSize: 15,
+      },
+      legend: {
+        display: true,
+        position: 'right',
+      },
+      scales: {
+        yAxes: [
+          {
+            display: true,
+            ticks: {
+              suggestedMin: 0,
+              beginAtZero: true,
+              suggestedMax: 500,
+            },
+          },
+        ],
+      },
+    }}
+  />
+</Paper>
+
                     </div>
                 </div>
             </div>

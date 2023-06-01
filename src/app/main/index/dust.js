@@ -26,9 +26,9 @@ class dust extends Component {
             
 <Paper className="w-full rounded-8 border-1" style={dust<12 ? {backgroundColor:"#00E000"} : dust<35.4 ? {backgroundColor:"#FFFF00"} : dust<55.4 ? {backgroundColor:"#FF7600"} : dust<150.4 ? {backgroundColor:"#FF0000"} : dust<250.4 ? {backgroundColor:"#990049"} : dust<350.4 ? {backgroundColor:"#7E0023"} : dust>350.4 ? {backgroundColor:"#3E0023"} : {} }>
 <div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
-        <Typography className="text-48 leading-none text-purple-dark">{dust ? Number(dust).toFixed(1) : 0}</Typography>
+        <Typography className="text-24 leading-none text-purple-dark">{dust ? Number(dust).toFixed(1) : 0}</Typography>
         <Typography style={{fontSize: '0.8rem'}}>ug/m </Typography>
-        <Typography className="text-12" color="textSecondary" style={{fontSize: '0.8rem'}} ><h1>Dust</h1></Typography>
+        <Typography className="text-12" color="textSecondary" style={{fontSize: '0.8rem'}} ><h3>Dust</h3></Typography>
     </div>
 </Paper>
         );

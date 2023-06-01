@@ -26,9 +26,9 @@ class NO2 extends Component {
 
 <Paper className="w-full rounded-8 border-1" style={no2<0.053 ? {backgroundColor:"#00E000"} : no2<0.1 ? {backgroundColor:"#FFFF00"} : no2<0.36 ? {backgroundColor:"#FF7600"} : no2<0.65 ? {backgroundColor:"#FF0000"} : no2<1.24 ? {backgroundColor:"#990049"} : no2<1.64 ? {backgroundColor:"#7E0023"} : no2>1.64 ? {backgroundColor:"#3E0023"} : {} }>
 <div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
-        <Typography className="text-48 leading-none text-purple-dark">{no2 ? Number(no2).toFixed(1) : 0}</Typography>
+        <Typography className="text-24 leading-none text-purple-dark">{no2 ? Number(no2).toFixed(1) : 0}</Typography>
         <Typography style={{fontSize: '0.8rem'}}>ppm </Typography>
-        <Typography className="text-12" color="textSecondary" style={{fontSize: '0.8rem'}} ><h1>NO2</h1></Typography>
+        <Typography className="text-12" color="textSecondary" style={{fontSize: '0.8rem'}} ><h3>NO2</h3></Typography>
     </div>
 </Paper>
         );

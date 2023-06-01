@@ -12,7 +12,8 @@ import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import ReactSpeedometer from "react-d3-speedometer";
-
+import Humidity from "./humidity";
+import Temperature from "./temperature"
 class RecentAQI extends Component {
     componentDidMount() {
         this.props.getRecentAQI();
@@ -83,31 +84,72 @@ class RecentAQI extends Component {
         return (
             
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-                    {/* <div> */}
+                    <div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+        <Humidity />
+    </div>
                     <ReactSpeedometer
                         needleHeightRatio={0.9}
                         maxSegmentLabels={5}
                         // segments={3}
                         maxValue={500}
-                        width={500}
+                        width={550}
                         height={300}
                         // customSegmentStops={[0, 500, 750, 900, 1000]}
                         customSegmentStops={[0, 50, 100, 150, 200, 300, 400, 500]}
                         segmentColors={['#00E000', '#FFFF00', '#FF7600', '#FF0000', '#990049', '#7E0023', '#3E0023']}
+                        // customSegmentLabels={[
+                        //   { text: 'Good', position: 'OUTSIDE', color: '#000000' },
+                        //   { text: 'Moderate', position: 'OUTSIDE', color: '#000000' },
+                        //   { text: 'Unhealthy for Sensitive', position: 'OUTSIDE', color: '#000000' },
+                        //   { text: 'Unhealthy', position: 'OUTSIDE', color: '#000000' },
+                        //   { text: 'Very Unhealthy', position: 'OUTSIDE', color: '#000000' },
+                        //   { text: 'Hazardous', position: 'OUTSIDE', color: '#000000' },
+                        //   { text: 'Highly Dangerous', position: 'OUTSIDE', color: '#000000' },
+                        // ]}
                         value={recentAQI}
                         currentValueText={'AQI: ${value}'}
                         // textColor={textColor}
                         />
-                        <ReactTable
+                                          <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+        <Temperature />
+    </div>
+    </div>
+
+                        <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+      <thead>
+        <tr>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Good</th>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Moderate</th>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Unhealthy for Sensitive</th>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Unhealthy</th>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Very Unhealthy</th>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Hazardous</th>
+          <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Highly Dangerous</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#00E000'}}>0-50</td>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#FFFF00' }}>50-100</td>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#FF7600' }}>100-150</td>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#FF0000' }}>150-200</td>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#990049', color: '#FFFFFF'  }}>200-300</td>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#7E0023', color: '#FFFFFF'  }}>300-400</td>
+          <td style={{ border: '1px solid black', padding: '8px', backgroundColor: '#3E0023', color: '#FFFFFF' }}>400-500</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+                        {/* <ReactTable
                             data={data}
                             columns={columns}
                             defaultPageSize={7}
                             className="-striped -highlight"
                             showPaginationBottom={false}
                             getTrProps={this.getTrProps}
-                            // trStyleCallback={ data => ( {color: data.row.Category=='Healthy' ? 'green' : 'red'} ) }
-
-                        />
+                        /> */}
 
                     
             </div>
