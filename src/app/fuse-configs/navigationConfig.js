@@ -58,14 +58,14 @@ const superAdminNavigationConfig = [
                 type: 'item',
                 icon: 'whatshot',
                 url: '/graph'
-            },
-            {
-                id: 'graphPrediction',
-                title: 'Graph Predictions',
-                type: 'item',
-                icon: 'whatshot',
-                url: '/graph-prediction'
             }
+            // {
+            //     id: 'graphPrediction',
+            //     title: 'Graph Predictions',
+            //     type: 'item',
+            //     icon: 'whatshot',
+            //     url: '/graph-prediction'
+            // }
         ]
     },
     {
@@ -87,6 +87,28 @@ const superAdminNavigationConfig = [
                 type: 'item',
                 icon: 'whatshot',
                 url: '/livestock-graph'
+            },
+        ]
+    },
+    {
+        id: 'Readings',
+        title: 'FarmBot',
+        type: 'group',
+        icon: 'whatshot',
+        children: [
+            {
+                id: 'animal',
+                title: 'FarmBot Data',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/farmbot-data'
+            },
+            {
+                id: 'graph',
+                title: 'FarmBot Graph',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/farmbot-graph'
             },
         ]
     },
