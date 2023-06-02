@@ -98,6 +98,28 @@ const superAdminNavigationConfig = [
         ]
     },
     {
+        id: 'Readings',
+        title: 'FarmBot Reading',
+        type: 'group',
+        icon: 'whatshot',
+        children: [
+            {
+                id: 'animal',
+                title: 'FarmBot Data',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/farmbot-data'
+            },
+            {
+                id: 'graph',
+                title: 'FarmBot Graph',
+                type: 'item',
+                icon: 'whatshot',
+                url: '/farmbot-graph'
+            },
+        ]
+    },
+    {
         id: 'report-group',
         title: 'Account',
         type: 'group',

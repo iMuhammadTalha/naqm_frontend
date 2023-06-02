@@ -16,6 +16,8 @@ import {GraphAppConfig} from "app/main/graph/GraphAppConfig";
 import {GraphPredictionAppConfig} from "app/main/graph-prediction/GraphPredictionAppConfig";
 import {LiveStockGraphAppConfig} from "app/main/livestock-graph/GraphAppConfig";
 import {LiveStockDataAppConfig} from "app/main/livestock-data/AirAppConfig";
+import {FarmBotGraphAppConfig} from "app/main/farmbot-graph/GraphAppConfig";
+import {FarmBotDataAppConfig} from "app/main/farmbot-data/DataAppConfig";
 
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
@@ -33,7 +35,9 @@ const routeConfigs = [
     LogoutConfig,
     Error404PageConfig,
     LiveStockGraphAppConfig,
-    LiveStockDataAppConfig
+    LiveStockDataAppConfig,
+    FarmBotGraphAppConfig,
+    FarmBotDataAppConfig
 ];
 
 const routes = [
