@@ -33,6 +33,7 @@ const Header = () => {
                 <div className="col-md-6 col-sm-6">
                   <div className="right-header text-right">
                     <ul className="social-icons">
+                      <li><a href="https://iotlab.seecs.nust.edu.pk/" class="fa fa-globe"></a></li>
                       <li><a href="https://www.linkedin.com/in/rafia-mumtaz-6817b535/" className="fa fa-linkedin" /></li>
                       <li><a href="https://scholar.google.com/citations?user=i6qLmkkAAAAJ&hl=en&oi=ao" className="fa fa-google-plus" /></li>
                       <li><a href="https://twitter.com/RafiaMumtaz4" className="fa fa-twitter" /></li>

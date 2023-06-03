@@ -18,6 +18,7 @@ import Dust from "./dust"
 import Humidity from "./humidity";
 import Temperature from "./temperature"
 import Legend from "./legend";
+// import { GoogleMap, Marker } from 'react-google-maps';
 
 import AirList from "./AirList"
 import GraphList from "./GraphList"
@@ -33,6 +34,17 @@ const styles = theme => ({
         color: theme.palette.primary.contrastText
     }
 });
+
+const mapContainerStyle = {
+    width: '100%',
+    height: '400px',
+  };
+
+  const center = {
+    lat: 37.7749, // Latitude of the location
+    lng: -122.4194, // Longitude of the location
+  };
+
 
 class Index extends Component {
     state = {
@@ -51,28 +63,28 @@ class Index extends Component {
             <div>
                 <Header />
             
-            <div className="w-full p-12">
+            <div className="w-full p-1">
 
             <div className="flex flex-wrap flex-row">
     {/* <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
         <Temperature />
     </div> */}
-    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-1">
         <CH4 />
     </div>
-    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-1">
         <NO2 />
     </div>
-    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-1">
         <NH3 />
     </div>
-    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-1">
         <CO />
     </div>
-    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-1">
         <CO2 />
     </div>
-    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-1">
         <Dust />
     </div>
     {/* <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
@@ -86,6 +98,13 @@ class Index extends Component {
         </div>
     </div>
 
+    {/* <GoogleMap
+      mapContainerStyle={mapContainerStyle}
+      center={center}
+      zoom={10}
+    >
+      <Marker position={center} />
+    </GoogleMap> */}
     
 
     <div className="flex flex-wrap mb-16">

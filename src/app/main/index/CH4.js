@@ -24,10 +24,10 @@ class ch4 extends Component {
         const { ch4 } = this.props;
         return (
             <Paper className="w-full rounded-8 border-1" style={ch4<50 ? {backgroundColor:"#00E000"} : ch4<100 ? {backgroundColor:"#FFFF00"} : ch4<150 ? {backgroundColor:"#FF7600"} : ch4<200 ? {backgroundColor:"#FF0000"} : ch4<300 ? {backgroundColor:"#990049"} : ch4<400 ? {backgroundColor:"#7E0023"} : ch4>400 ? {backgroundColor:"#3E0023"} : {} }>
-    <div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
+    <div className="text-center pt-1 pb-1" style={{overflow: "auto"}}>
         <Typography className="text-24 leading-none text-purple-dark">{ch4 ? Number(ch4).toFixed(1) : 0}</Typography>
         <Typography style={ ch4>300 ? { color: '#FFFFFF', fontSize: '0.8rem' } : {fontSize: '0.8rem'}}>ppm </Typography>
-        <Typography className="text-12" color="textSecondary" style={ ch4>300 ? { color: '#FFFFFF', fontSize: '0.8rem' } : {fontSize: '0.8rem'}}><h3>CH4</h3></Typography>
+        <Typography className="text-15 leading-none" color="textSecondary" style={ ch4>300 ? { color: '#FFFFFF' } : {}}>CH4</Typography>
     </div>
 </Paper>
 

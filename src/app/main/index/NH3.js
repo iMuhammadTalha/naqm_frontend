@@ -26,10 +26,10 @@ class nh3 extends Component {
         return (
             
 <Paper className="w-full rounded-8 border-1" style={nh3<200 ? {backgroundColor:"#00E000"} : nh3<400 ? {backgroundColor:"#FFFF00"} : nh3<800 ? {backgroundColor:"#FF7600"} : nh3<1200 ? {backgroundColor:"#FF0000"} : nh3<1800 ? {backgroundColor:"#990049"} : nh3<2000 ? {backgroundColor:"#7E0023"} : nh3>2000 ? {backgroundColor:"#3E0023"} : {} }>
-<div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
+<div className="text-center pt-1 pb-1" style={{overflow: "auto"}}>
         <Typography className="text-24 leading-none text-purple-dark">{nh3 ? Number(nh3).toFixed(1) : 0}</Typography>
         <Typography style={{fontSize: '0.8rem'}}>ppm </Typography>
-        <Typography className="text-12" color="textSecondary" style={{fontSize: '0.8rem'}} ><h3>NH3</h3></Typography>
+        <Typography className="text-15 leading-none" color="textSecondary" >NH3</Typography>
     </div>
 </Paper>
         );

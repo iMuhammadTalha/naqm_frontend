@@ -25,10 +25,10 @@ class co2 extends Component {
         return (
         
 <Paper className="w-full rounded-8 border-1" style={co2<1000 ? {backgroundColor:"#00E000"} : co2<2000 ? {backgroundColor:"#FFFF00"} : co2<5000 ? {backgroundColor:"#FF7600"} : co2<10000 ? {backgroundColor:"#FF0000"} : co2<20000 ? {backgroundColor:"#990049"} : co2<40000 ? {backgroundColor:"#7E0023"} : co2>40000 ? {backgroundColor:"#3E0023"} : {} }>
-<div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
+<div className="text-center pt-1 pb-1" style={{overflow: "auto"}}>
         <Typography className="text-24 leading-none text-purple-dark">{co2 ? Number(co2).toFixed(0) : 0}</Typography>
         <Typography style={{fontSize: '0.8rem'}}>ppm </Typography>
-        <Typography className="text-12" color="textSecondary" style={{fontSize: '0.8rem'}} ><h3>CO2</h3></Typography>
+        <Typography className="text-15 leading-none" color="textSecondary" >CO2</Typography>
     </div>
 </Paper>
         );

@@ -23,7 +23,7 @@ class humidity extends Component {
         const { humidity } = this.props;
         return (
             <Paper className="w-full rounded-8 border-1">
-<div className="text-center pt-4 pb-12" style={{overflow: "auto"}}>
+<div className="text-center pt-1 pb-1" style={{overflow: "auto"}}>
                     <Typography
                         className="text-24 leading-none text-purple-dark">{humidity ? humidity : 0}</Typography>
                         %
