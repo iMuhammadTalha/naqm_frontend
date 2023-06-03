@@ -6,8 +6,8 @@ import { bindActionCreators } from "redux";
 import * as Actions from "./store/actions";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTint } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faTint } from '@fortawesome/free-solid-svg-icons';
 
 class humidity extends Component {
 
@@ -32,7 +32,7 @@ class humidity extends Component {
                     <Typography className="text-12" color="textSecondary"><h3>Humidity</h3></Typography>
                     
                     <div style={{ position: "absolute"}}>
-                    <FontAwesomeIcon icon={faTint} size="sm" />
+                    {/* <FontAwesomeIcon icon={faTint} size="sm" /> */}
     </div>
                 </div>
             </Paper>
