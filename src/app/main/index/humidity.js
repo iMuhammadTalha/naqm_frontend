@@ -31,7 +31,7 @@ class humidity extends Component {
                         %
                     <Typography className="text-12" color="textSecondary"><h3>Humidity</h3></Typography>
                     
-                    <div style={{ position: "absolute", bottom: "4px", right: "4px" }}>
+                    <div style={{ position: "absolute"}}>
                     <FontAwesomeIcon icon={faTint} size="sm" />
     </div>
                 </div>

@@ -13,6 +13,8 @@ import AirHeader from "./AirHeader";
 import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
+import FarmBotHeader from "../farmbot/Header";
+import Footer from "../farmbot/Footer";
 
 class AirApp extends Component {
     componentDidMount() {
@@ -30,19 +32,25 @@ class AirApp extends Component {
             window.location = "/login";
         }
         return (
-            <React.Fragment>
-                <FusePageSimple
-                    header={
-                        <AirHeader pageLayout={() => this.pageLayout}/>
-                    }
-                    content={<AirList/>}
-                    sidebarInner
-                    onRef={(instance) => {
-                        this.pageLayout = instance;
-                    }}
-                    innerScroll={false}
-                />
-            </React.Fragment>
+            <div>
+                <FarmBotHeader />
+                    <AirList/>
+                <Footer color="#6aa84f" />
+            </div>
+
+            // <React.Fragment>
+            //     <FusePageSimple
+            //         header={
+            //             <AirHeader pageLayout={() => this.pageLayout}/>
+            //         }
+            //         content={<AirList/>}
+            //         sidebarInner
+            //         onRef={(instance) => {
+            //             this.pageLayout = instance;
+            //         }}
+            //         innerScroll={false}
+            //     />
+            // </React.Fragment>
         );
     }
 }

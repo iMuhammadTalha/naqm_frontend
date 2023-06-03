@@ -2,7 +2,7 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 // import logo from '%PUBLIC_URL%naqm.png'; // import the image file
 
-const AQMHeader = () => {
+const FarmBotHeader = () => {
   return (
     <header style={{paddingBottom: "10px"}}>
       <div>
@@ -21,7 +21,7 @@ const AQMHeader = () => {
       crossorigin="anonymous"/>
         </head>
         <div className="site-header">
-          <div className="top-header">
+          <div className="top-header" style={{background: '#6aa84f'}}>
             <div className="container">
               <div className="row">
                 <div className="col-md-6 col-sm-6">
@@ -47,15 +47,14 @@ const AQMHeader = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-1 col-sm-1 col-xs-6">
-                    <a href="index.html" title="Dreri"><img src={process.env.PUBLIC_URL + '/naqm.png'} height="60px" alt="" /></a>
+                    <a href="index.html" title="Dreri"><img src={process.env.PUBLIC_URL + '/farmbot/farmbot.png'} alt="" /></a>
                 </div> {/* /.col-md-4 */}
                 <div className="col-md-11 col-sm-11 col-xs-6">
                   <div className="menu text-right hidden-sm hidden-xs">
                     <ul>
-                      <li><a href="/aqm">Home</a></li>
-                      <li><a href="/airdashboard">AQI</a></li>
-                      <li><a href="/air">Data</a></li>
-                      <li><a href="/graph">Graph</a></li>
+                      <li><a href="/farmbot">Home</a></li>
+                      <li><a href="/farmbot-data">Data</a></li>
+                      <li><a href="/farmbot-graph">Graph</a></li>
                       </ul>
                   </div> {/* /.menu */}
                 </div> {/* /.col-md-8 */}
@@ -71,4 +70,4 @@ const AQMHeader = () => {
   );
 };
 
-export default AQMHeader;
+export default FarmBotHeader;

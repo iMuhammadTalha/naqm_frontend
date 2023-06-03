@@ -45,7 +45,7 @@ class GraphList extends Component {
                                             label: 'Nitrogen',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#6aa84f',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: nitrogenAvg
@@ -68,7 +68,7 @@ class GraphList extends Component {
                                             label: 'Phosphorus',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#6aa84f',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: phosphorusAvg
@@ -91,7 +91,7 @@ class GraphList extends Component {
                                             label: 'Potassium',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#6aa84f',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: potassiumAvg
@@ -114,7 +114,7 @@ class GraphList extends Component {
                                             label: 'Soil Moisture',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#6aa84f',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: soilMoistureAvg

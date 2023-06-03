@@ -45,7 +45,7 @@ class GraphList extends Component {
                                             label: 'AQI',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: AQIAvg
@@ -90,7 +90,7 @@ class GraphList extends Component {
                                             label: 'NH3',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: nh3Avg
@@ -134,7 +134,7 @@ class GraphList extends Component {
                                             label: 'CO',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: coAvg
@@ -178,7 +178,7 @@ class GraphList extends Component {
                                             label: 'NO2',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: no2Avg
@@ -222,7 +222,7 @@ class GraphList extends Component {
                                             label: 'CH4',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: ch4Avg
@@ -266,7 +266,7 @@ class GraphList extends Component {
                                             label: 'CO2',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: co2Avg
@@ -309,7 +309,7 @@ class GraphList extends Component {
                                             label: 'Dust',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: dustAvg
@@ -353,7 +353,7 @@ class GraphList extends Component {
                                             label: 'Humidity',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: humitidyAvg
@@ -397,7 +397,7 @@ class GraphList extends Component {
                                             label: 'Temperature',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#008080',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: temperatureAvg

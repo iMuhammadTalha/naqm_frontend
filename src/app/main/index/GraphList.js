@@ -156,7 +156,7 @@ class GraphList extends Component {
                         label: 'AQI',
                         fill: false,
                         lineTension: 0.5,
-                        backgroundColor: 'rgba(75,192,192,1)',
+                        backgroundColor: '#008080',
                         borderColor: 'rgba(0,0,0,1)',
                         borderWidth: 2,
                         data: AQIAvg

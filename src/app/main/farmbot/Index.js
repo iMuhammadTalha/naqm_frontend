@@ -4,7 +4,7 @@ import {darken} from '@material-ui/core/styles/colorManipulator';
 import {FuseAnimate} from '@fuse';
 import {withRouter} from 'react-router-dom';
 import classNames from 'classnames';
-import AQMHeader from "./Header";
+import FarmBotHeader from "./Header";
 import Footer from './Footer';
 import { FuseAnimateGroup } from "@fuse";
 import Slider from 'react-slick';
@@ -22,6 +22,8 @@ const styles = theme => ({
         color: theme.palette.primary.contrastText
     }
 });
+
+const farmBotColor='#6aa84f'
 
 const mapContainerStyle = {
     width: '100%',
@@ -65,7 +67,7 @@ const mapContainerStyle = {
             <div className="col-md-4 col-sm-6">
               <div className="service-item">
                 <div className="service-header">
-                  <i className="fa fa-umbrella"></i>
+                  <i className="fa fa-umbrella" style={{color: '#6aa84f'}}></i>
                   <h3>Project Discussion</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
@@ -77,7 +79,7 @@ const mapContainerStyle = {
             <div className="col-md-4 col-sm-6">
               <div className="service-item">
                 <div className="service-header">
-                  <i className="fa fa-eye"></i>
+                  <i className="fa fa-eye" style={{color: '#6aa84f'}}></i>
                   <h3>Outcome</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
@@ -89,7 +91,7 @@ const mapContainerStyle = {
             <div className="col-md-4 col-sm-6">
               <div className="service-item">
                 <div className="service-header">
-                  <i className="fa fa-bullseye"></i>
+                  <i className="fa fa-bullseye" style={{color: '#6aa84f'}}></i>
                   <h3>Benefits</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
@@ -110,7 +112,7 @@ const mapContainerStyle = {
         <div className="container">
           <div className="title-section text-center">
             <h2>Contact Us</h2>
-            <span></span>
+            <span style={{background: '#6aa84f'}}></span>
           </div>
           <div className="row">
             <div className="col-md-7 col-sm-6">
@@ -132,23 +134,23 @@ const mapContainerStyle = {
                   <label htmlFor="message">Message:</label>
                   <textarea name="message" id="message" rows="6"></textarea>
                 </p>
-                <input className="mainBtn" type="submit" name="" value="Send Message" />
+                <input className="mainBtn" type="submit" name="" value="Send Message"  style={{background: '#6aa84f'}}/>
               </div>
             </div>
             <div className="col-md-5 col-sm-6">
               <h4 className="widget-title">Our location</h4>
               <div className="contact-info">
                 <span>
-                  <i className="fa fa-home"></i>IoT Lab, SEECS, NUST H-12, Islamabad, Pakistan
+                  <i className="fa fa-home" style={{color: '#6aa84f'}}></i>IoT Lab, SEECS, NUST H-12, Islamabad, Pakistan
                 </span>
                 <span>
-                  <i className="fa fa-phone"></i>051-90852161
+                  <i className="fa fa-phone" style={{color: '#6aa84f'}}></i>051-90852161
                 </span>
                 <span>
-                  <i className="fa fa-envelope"></i>rafia.mumtaz@seecs.edu.pk
+                  <i className="fa fa-envelope" style={{color: '#6aa84f'}}></i>rafia.mumtaz@seecs.edu.pk
                 </span>
                 <span>
-                  <i className="fa fa-envelope"></i>iotlab@seecs.edu.pk
+                  <i className="fa fa-envelope" style={{color: '#6aa84f'}}></i>iotlab@seecs.edu.pk
                 </span>
               </div>
             </div>
@@ -174,13 +176,13 @@ class Index extends Component {
 
         return (
             <div>
-                <AQMHeader />
+                <FarmBotHeader />
             
                 <ImageSlider />
       <ServicesSection />
       <ContactSection />
 
-<Footer  color="#008080" />
+<Footer  color="#6aa84f" />
       </div>      
         );
     }
