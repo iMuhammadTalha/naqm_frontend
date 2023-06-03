@@ -6,10 +6,25 @@ import {authRoles} from "app/auth";
 export const LiveStockGraphAppConfig = {
     settings: {
         layout: {
-            config: {},
-        },
+            config: {
+                navbar: {
+                    display: false
+                },
+                toolbar: {
+                    display: false
+                },
+                footer: {
+                    display: false
+                },
+                leftSidePanel: {
+                    display: false
+                },
+                rightSidePanel: {
+                    display: false
+                }
+            }
+        }
     },
-    auth: authRoles.fleet,
     routes: [
         {
             path: "/livestock-graph",

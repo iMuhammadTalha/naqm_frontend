@@ -45,7 +45,7 @@ class GraphList extends Component {
                                             label: 'Body Temperature',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: bodyTemperatureAvg
@@ -68,7 +68,7 @@ class GraphList extends Component {
                                             label: 'Atmospheric Temperature',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: atmosphericTemperatureAvg
@@ -91,7 +91,7 @@ class GraphList extends Component {
                                             label: 'Atmospheric Humidity',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: atmosphericHumidityAvg
@@ -114,7 +114,7 @@ class GraphList extends Component {
                                             label: 'Beat / Min',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: beatPerMinAvg
@@ -137,7 +137,7 @@ class GraphList extends Component {
                                             label: 'Ax',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: axAvg
@@ -159,7 +159,7 @@ class GraphList extends Component {
                                             label: 'Ay',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: ayAvg
@@ -182,7 +182,7 @@ class GraphList extends Component {
                                             label: 'Az',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: azAvg
@@ -205,7 +205,7 @@ class GraphList extends Component {
                                             label: 'Gx',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: gxAvg
@@ -227,7 +227,7 @@ class GraphList extends Component {
                                             label: 'Gy',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: gyAvg
@@ -249,7 +249,7 @@ class GraphList extends Component {
                                             label: 'Gz',
                                             fill: false,
                                             lineTension: 0.5,
-                                            backgroundColor: 'rgba(75,192,192,1)',
+                                            backgroundColor: '#795548',
                                             borderColor: 'rgba(0,0,0,1)',
                                             borderWidth: 2,
                                             data: gzAvg

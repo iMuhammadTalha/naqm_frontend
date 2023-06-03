@@ -2,7 +2,7 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 // import logo from '%PUBLIC_URL%naqm.png'; // import the image file
 
-const FarmBotHeader = () => {
+const LivestockHeader = () => {
   return (
     <header style={{paddingBottom: "10px"}}>
       <div>
@@ -21,7 +21,7 @@ const FarmBotHeader = () => {
       crossorigin="anonymous"/>
         </head>
         <div className="site-header">
-          <div className="top-header" style={{background: '#6aa84f'}}>
+          <div className="top-header" style={{background: '#795548'}}>
             <div className="container">
               <div className="row">
                 <div className="col-md-6 col-sm-6">
@@ -33,7 +33,7 @@ const FarmBotHeader = () => {
                 <div className="col-md-6 col-sm-6">
                   <div className="right-header text-right">
                     <ul className="social-icons">
-                      <li><a href="https://iotlab.seecs.nust.edu.pk/" class="fa fa-globe"></a></li>
+                      <li><a href="https://iotlab.seecs.nust.edu.pk/" class="fa fa-globe" ></a></li>
                       <li><a href="https://www.linkedin.com/in/rafia-mumtaz-6817b535/" className="fa fa-linkedin" /></li>
                       <li><a href="https://scholar.google.com/citations?user=i6qLmkkAAAAJ&hl=en&oi=ao" className="fa fa-google-plus" /></li>
                       <li><a href="https://twitter.com/RafiaMumtaz4" className="fa fa-twitter" /></li>
@@ -47,14 +47,14 @@ const FarmBotHeader = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-1 col-sm-1 col-xs-6">
-                    <a href="/farmbot" title="Dreri"><img src={process.env.PUBLIC_URL + '/farmbot/farmbot.png'} alt="" /></a>
+                    <a href="/livestock" title="Dreri"><img src={process.env.PUBLIC_URL + '/livestock/livestock.png'} alt="" /></a>
                 </div> {/* /.col-md-4 */}
                 <div className="col-md-11 col-sm-11 col-xs-6">
                   <div className="menu text-right hidden-sm hidden-xs">
                     <ul>
-                      <li><a href="/farmbot">Home</a></li>
-                      <li><a href="/farmbot-data">Data</a></li>
-                      <li><a href="/farmbot-graph">Graph</a></li>
+                      <li><a href="/livestock">Home</a></li>
+                      <li><a href="/livestock-data">Data</a></li>
+                      <li><a href="/livestock-graph">Graph</a></li>
                       </ul>
                   </div> {/* /.menu */}
                 </div> {/* /.col-md-8 */}
@@ -70,4 +70,4 @@ const FarmBotHeader = () => {
   );
 };
 
-export default FarmBotHeader;
+export default LivestockHeader;

@@ -19,6 +19,7 @@ import {LiveStockDataAppConfig} from "app/main/livestock-data/AirAppConfig";
 import {FarmBotGraphAppConfig} from "app/main/farmbot-graph/GraphAppConfig";
 import {FarmBotDataAppConfig} from "app/main/farmbot-data/DataAppConfig";
 import {Config as FarmBotConfig} from "app/main/farmbot/Config";
+import {Config as LiveStockConfig} from "app/main/livestock/Config";
 
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
@@ -39,7 +40,8 @@ const routeConfigs = [
     LiveStockDataAppConfig,
     FarmBotGraphAppConfig,
     FarmBotDataAppConfig,
-    FarmBotConfig
+    FarmBotConfig,
+    LiveStockConfig
 ];
 
 const routes = [

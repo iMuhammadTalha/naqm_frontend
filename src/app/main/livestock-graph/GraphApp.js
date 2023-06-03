@@ -13,7 +13,8 @@ import GraphHeader from "./GraphHeader";
 import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
-
+import LivestockHeader from "../livestock/Header";
+import Footer from "../livestock/Footer";
 class GraphApp extends Component {
     componentDidMount() {
         this.props.getAllGraphs();
@@ -30,19 +31,25 @@ class GraphApp extends Component {
             window.location = "/login";
         }
         return (
-            <React.Fragment>
-                <FusePageSimple
-                    header={
-                        <GraphHeader pageLayout={() => this.pageLayout}/>
-                    }
-                    content={<GraphList/>}
-                    sidebarInner
-                    onRef={(instance) => {
-                        this.pageLayout = instance;
-                    }}
-                    innerScroll={false}
-                />
-            </React.Fragment>
+            <div>
+                <LivestockHeader />
+                    <GraphList/>
+                <Footer color="#795548" />
+            </div>
+
+            // <React.Fragment>
+            //     <FusePageSimple
+            //         header={
+            //             <GraphHeader pageLayout={() => this.pageLayout}/>
+            //         }
+            //         content={<GraphList/>}
+            //         sidebarInner
+            //         onRef={(instance) => {
+            //             this.pageLayout = instance;
+            //         }}
+            //         innerScroll={false}
+            //     />
+            // </React.Fragment>
         );
     }
 }

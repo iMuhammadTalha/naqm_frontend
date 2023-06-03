@@ -13,7 +13,8 @@ import AirHeader from "./AirHeader";
 import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
-
+import LivestockHeader from "../livestock/Header";
+import Footer from "../livestock/Footer";
 class AirApp extends Component {
     componentDidMount() {
         this.props.getAllAirs();
@@ -30,19 +31,25 @@ class AirApp extends Component {
             window.location = "/login";
         }
         return (
-            <React.Fragment>
-                <FusePageSimple
-                    header={
-                        <AirHeader pageLayout={() => this.pageLayout}/>
-                    }
-                    content={<AirList/>}
-                    sidebarInner
-                    onRef={(instance) => {
-                        this.pageLayout = instance;
-                    }}
-                    innerScroll={false}
-                />
-            </React.Fragment>
+            <div>
+                <LivestockHeader />
+                    <AirList/>
+                <Footer color="#795548" />
+            </div>
+
+            // <React.Fragment>
+            //     <FusePageSimple
+            //         header={
+            //             <AirHeader pageLayout={() => this.pageLayout}/>
+            //         }
+            //         content={<AirList/>}
+            //         sidebarInner
+            //         onRef={(instance) => {
+            //             this.pageLayout = instance;
+            //         }}
+            //         innerScroll={false}
+            //     />
+            // </React.Fragment>
         );
     }
 }

@@ -186,13 +186,13 @@ class AirList extends Component {
                             accessor: 'gz',
                             filterable: false,
                             className: 'justify-center font-bold'
-                        },
-                        {
-                            Header: 'Animal',
-                            accessor: 'animal_id',
-                            filterable: false,
-                            className: 'justify-center font-bold'
                         }
+                        // {
+                        //     Header: 'Animal',
+                        //     accessor: 'animal_id',
+                        //     filterable: false,
+                        //     className: 'justify-center font-bold'
+                        // }
                     ]}
                     defaultPageSize={20}
                     resizable={true}

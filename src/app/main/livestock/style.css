@@ -1,0 +1,35 @@
+.MuiDrawer-root-223 {
+    display: none;
+}
+
+.MuiDrawer-root {
+    display: none;
+}
+
+.rt-th {
+    white-space: normal !important
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

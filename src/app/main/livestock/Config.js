@@ -1,9 +1,8 @@
-/** @format */
+import Index from './Index';
+import {authRoles} from 'app/auth';
+import App from './App';
 
-import AirApp from "./AirApp";
-import {authRoles} from "app/auth";
-
-export const LiveStockDataAppConfig = {
+export const Config = {
     settings: {
         layout: {
             config: {
@@ -25,10 +24,11 @@ export const LiveStockDataAppConfig = {
             }
         }
     },
+    auth: authRoles.onlyGuest,
     routes: [
         {
-            path: "/livestock-data",
-            component: AirApp,
-        },
-    ],
+            path: '/livestock',
+            component: App
+        }
+    ]
 };
