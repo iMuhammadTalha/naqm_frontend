@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import ReactTable from "react-table";
 import * as Actions from "./store/actions";
-import { Chart } from 'react-charts'
+
 import {Line} from 'react-chartjs-2';
 import { FuseAnimateGroup } from "@fuse";
 
