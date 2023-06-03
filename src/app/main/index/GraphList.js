@@ -172,9 +172,7 @@ class GraphList extends Component {
             data=[]
         }
         return (
-            <div className="w-full p-12">
-                <div className="mb-16 w-full">
-                    <div className="widget w-full p-16">
+            
                     <Paper className="w-full rounded-8 border-1">
   <div className="flex items-center justify-between mb-8">
     <div className="flex items-center" style={{margin: "auto", marginTop: '1%'}}>
@@ -222,11 +220,6 @@ class GraphList extends Component {
     }}
   />
 </Paper>
-
-                    </div>
-                </div>
-            </div>
-
         );
     }
 }

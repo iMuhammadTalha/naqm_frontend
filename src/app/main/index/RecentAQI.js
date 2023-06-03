@@ -82,13 +82,16 @@ class RecentAQI extends Component {
             className: 'justify-center font-bold'
           }];
         return (
-            
-            <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+          // display: 'flex',
+            <div style={{justifyContent:'center', alignItems:'center'}}>
                     <div>
                     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+                    <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12" style={{ height: '170px' }}>
         <Humidity />
     </div>
+    {/* <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+        <Temperature />
+    </div> */}
                     <ReactSpeedometer
                         needleHeightRatio={0.9}
                         maxSegmentLabels={5}
@@ -112,9 +115,13 @@ class RecentAQI extends Component {
                         currentValueText={'AQI: ${value}'}
                         // textColor={textColor}
                         />
-                                          <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12">
+                            <div className="widget flex w-full sm:w-1/2 md:w-1/6 p-12" style={{ height: '170px' }}>
         <Temperature />
     </div>
+                {/* <div class="map-holder">
+                    <div class="google-map-canvas" id="map-canvas" style="height: 250px;">
+                    </div>
+                </div>   */}
     </div>
 
                         <table style={{ borderCollapse: 'collapse', width: '100%' }}>

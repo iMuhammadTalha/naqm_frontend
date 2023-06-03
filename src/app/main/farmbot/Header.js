@@ -47,7 +47,7 @@ const AQMHeader = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-1 col-sm-1 col-xs-6">
-                    <a href="index.html" title="Dreri"><img src={process.env.PUBLIC_URL + '/aqm/naqm.png'} height={'50px'} alt="" /></a>
+                    <a href="index.html" title="Dreri"><img src={process.env.PUBLIC_URL + '/naqm.png'} height="60px" alt="" /></a>
                 </div> {/* /.col-md-4 */}
                 <div className="col-md-11 col-sm-11 col-xs-6">
                   <div className="menu text-right hidden-sm hidden-xs">

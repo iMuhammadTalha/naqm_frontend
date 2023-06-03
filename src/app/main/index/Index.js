@@ -92,8 +92,8 @@ class Index extends Component {
     </div>         */}
     </div>
 
-    <div className="flex flex-wrap mb-16">
-        <div className="widget w-full p-1">
+    <div className="flex flex-wrap flex-row">
+        <div className="widget w-full">
             <RecentAQI />
         </div>
     </div>
