@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ color }) => {
+  const footerColor = color || "#004879"; // Default color if no color prop is provided
+
   return (
     <footer>
-<div className="site-footer">
+<div className="site-footer" style={{ backgroundColor: footerColor }}>
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-sm-8 col-xs-12">

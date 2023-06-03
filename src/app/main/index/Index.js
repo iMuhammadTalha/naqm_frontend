@@ -4,7 +4,7 @@ import {darken} from '@material-ui/core/styles/colorManipulator';
 import {FuseAnimate} from '@fuse';
 import {withRouter} from 'react-router-dom';
 import classNames from 'classnames';
-import Header from './Header';
+import AQMHeader from "./Header";
 import Footer from './Footer';
 import { FuseAnimateGroup } from "@fuse";
 
@@ -61,7 +61,7 @@ class Index extends Component {
 
         return (
             <div>
-                <Header />
+                <AQMHeader />
             
             <div className="w-full p-1">
 
@@ -140,7 +140,7 @@ class Index extends Component {
     </div>
 </div>
 
-<Footer />
+<Footer  color="#008080" />
       </div>      
         );
     }

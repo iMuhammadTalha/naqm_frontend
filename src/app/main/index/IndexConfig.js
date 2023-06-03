@@ -27,7 +27,7 @@ export const IndexConfig = {
     auth: authRoles.onlyGuest,
     routes: [
         {
-            path: '/index',
+            path: '/aqm',
             component: IndexApp
         }
     ]

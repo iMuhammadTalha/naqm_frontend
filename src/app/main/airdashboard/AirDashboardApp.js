@@ -14,7 +14,7 @@ import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
-import Header from "../index/Header";
+import AQMHeader from "../index/Header";
 import Footer from "../index/Footer";
 
 class AirDashboardApp extends Component {
@@ -36,9 +36,9 @@ class AirDashboardApp extends Component {
         }
         return (
             <div>
-                <Header />
+                <AQMHeader />
                     <AirDashboardList/>
-                <Footer />
+                <Footer  color="#008080" />
             </div> 
         );
     }

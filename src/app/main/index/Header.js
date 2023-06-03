@@ -2,7 +2,7 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 // import logo from '%PUBLIC_URL%naqm.png'; // import the image file
 
-const Header = () => {
+const AQMHeader = () => {
   return (
     <header style={{paddingBottom: "10px"}}>
       <div>
@@ -52,7 +52,7 @@ const Header = () => {
                 <div className="col-md-11 col-sm-11 col-xs-6">
                   <div className="menu text-right hidden-sm hidden-xs">
                     <ul>
-                      <li><a href="/index">Home</a></li>
+                      <li><a href="/aqm">Home</a></li>
                       <li><a href="/airdashboard">AQI</a></li>
                       <li><a href="/air">Data</a></li>
                       <li><a href="/graph">Graph</a></li>
@@ -71,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AQMHeader;

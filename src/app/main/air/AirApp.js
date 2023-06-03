@@ -14,7 +14,7 @@ import * as Actions from "./store/actions";
 import reducer from "./store/reducers";
 import "./style.css";
 
-import Header from "../index/Header";
+import AQMHeader from "../index/Header";
 import Footer from "../index/Footer";
 
 class AirApp extends Component {
@@ -35,9 +35,9 @@ class AirApp extends Component {
         return (
 
             <div>
-                <Header />
+                <AQMHeader />
                     <AirList/>
-                <Footer />
+                <Footer color="#008080" />
             </div>
 
         );
