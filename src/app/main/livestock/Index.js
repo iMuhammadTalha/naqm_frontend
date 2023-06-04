@@ -50,11 +50,11 @@ const mapContainerStyle = {
     return (
       <Slider {...settings}>
         <div style={{ textAlign: 'center' }}>
-          <img src={process.env.PUBLIC_URL + '/farmbot/crop.png'} alt="Image 1" />
+          <img src={process.env.PUBLIC_URL + '/livestock/animal.png'} alt="Image 1" style={{ margin: '0 auto' }} />
         </div>
-        <div style={{ textAlign: 'center' }}>
-          <img src={process.env.PUBLIC_URL + '/naqm.png'} alt="Image 1" />
-        </div>
+        {/* <div style={{ textAlign: 'center' }}>
+          <img src={process.env.PUBLIC_URL + '/livestock/animal.png'} alt="Image 1" style={{ width: '100%', margin: '0 auto', margin: '0 auto' }}/>
+        </div> */}
       </Slider>
     );
   };
@@ -71,8 +71,8 @@ const mapContainerStyle = {
                   <h3>Project Discussion</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
-                  Aims to monitor water quality using IoT sensors mounted on a drone.
-                </div>
+                The livestock industry suffers significant financial losses of around $21 billion annually due to animal diseases, impacting both producers and consumers. To address this challenge, an innovative solution involving the use of smart animal collars with various sensors has been developed. These collars detect vital parameters such as temperature, humidity, heart rate, body conditions, lameness, and behavior activity. The collected data is transmitted to a fixed unit using Lora Module, which further sends it to the cloud for processing through Machine Learning models. The results are then displayed on a mobile app, providing alerts and suggestions for improved livestock management.
+</div>
               </div>
             </div>
   
@@ -83,8 +83,8 @@ const mapContainerStyle = {
                   <h3>Outcome</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
-                  Real-time monitoring of water quality parameters such as conductivity, pH, oxygen levels, and temperature.
-                </div>
+                Develop an integrated system utilizing smart animal collars with multi-sensor capabilities for efficient livestock management. The collars transmit data to a fixed unit via Lora Module, which further sends it to the cloud for processing using Machine Learning models. The processed results are presented on a mobile app, offering real-time alerts and suggestions for disease prevention and improved livestock management practices.
+</div>
               </div>
             </div>
   
@@ -95,8 +95,18 @@ const mapContainerStyle = {
                   <h3>Benefits</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
-                  Enhanced data accuracy compared to traditional monitoring methods. Wide coverage and accessibility, including remote or inaccessible water bodies. Cost and time efficiency through automated data collection and analysis.
-                </div>
+  <ul>
+    <li>
+    Disease Prevention: Early detection of health issues through sensor-equipped collars helps prevent the spread of diseases, reducing financial losses for livestock producers and improving the overall health of animals.
+    </li>
+    <li>
+    Enhanced Livestock Management: Real-time monitoring of vital parameters enables more precise and proactive management practices, leading to improved animal welfare, productivity, and profitability.
+    </li>
+    <li>
+    Consumer Safety: By minimizing the risk of bacterial diseases and malnutrition in dairy products, the use of smart collars promotes safer and healthier food consumption for consumers.
+    </li>
+  </ul>
+</div>
               </div>
             </div>
           </div>

@@ -50,10 +50,7 @@ const mapContainerStyle = {
     return (
       <Slider {...settings}>
         <div style={{ textAlign: 'center' }}>
-          <img src={process.env.PUBLIC_URL + '/farmbot/crop.png'} alt="Image 1" />
-        </div>
-        <div style={{ textAlign: 'center' }}>
-          <img src={process.env.PUBLIC_URL + '/naqm.png'} alt="Image 1" />
+        <img src={process.env.PUBLIC_URL + '/farmbot/crop.png'} alt="Image 1" height={400} style={{ width: '100%', margin: '0 auto' }}/>
         </div>
       </Slider>
     );
@@ -71,7 +68,7 @@ const mapContainerStyle = {
                   <h3>Project Discussion</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
-                  Aims to monitor water quality using IoT sensors mounted on a drone.
+                Precision agriculture utilizes technology to efficiently manage crops. A multimodal approach combining machine vision, spectral imagery, and IoT enables autonomous farm management. RGB and hyper-spectral cameras capture multi-temporal images, allowing for vegetation index calculation, plant health prediction, and yield estimation. Soil sensors enhance data fusion, revolutionizing agriculture for long-term sustainability.
                 </div>
               </div>
             </div>
@@ -83,7 +80,7 @@ const mapContainerStyle = {
                   <h3>Outcome</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
-                  Real-time monitoring of water quality parameters such as conductivity, pH, oxygen levels, and temperature.
+                Develop a multimodal precision agriculture system integrating machine vision, spectral imagery, and IoT technologies. Capture multi-temporal images to calculate vegetation indices, predict plant health, and estimate yield. Soil sensor integration enables comprehensive analysis, revolutionizing agriculture for long-term sustainability.
                 </div>
               </div>
             </div>
@@ -95,8 +92,19 @@ const mapContainerStyle = {
                   <h3>Benefits</h3>
                 </div>
                 <div className="service-description" style={{ textAlign: "justify" }}>
-                  Enhanced data accuracy compared to traditional monitoring methods. Wide coverage and accessibility, including remote or inaccessible water bodies. Cost and time efficiency through automated data collection and analysis.
-                </div>
+  <ul>
+    <li>
+      Increased Efficiency: Technology-driven precision agriculture optimizes resource allocation, improves decision-making, and enhances crop management efficiency.
+    </li>
+    <li>
+      Sustainable Farming: By accurately assessing plant health and soil quality, the system promotes sustainable practices, minimizing environmental impact and reducing input waste.
+    </li>
+    <li>
+      Improved Yield: Predictive capabilities enable early issue detection, enabling timely interventions and maximizing crop yield and profitability.
+    </li>
+  </ul>
+</div>
+
               </div>
             </div>
           </div>
