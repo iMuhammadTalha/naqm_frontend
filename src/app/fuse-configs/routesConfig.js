@@ -21,6 +21,7 @@ import {FarmBotDataAppConfig} from "app/main/farmbot-data/DataAppConfig";
 import {Config as FarmBotConfig} from "app/main/farmbot/Config";
 import {Config as LiveStockConfig} from "app/main/livestock/Config";
 import {Config as AQMConfig} from "app/main/aqm/Config";
+import {HomeConfig} from "app/main/home/HomeConfig";
 
 import {LogoutConfig} from "app/main/logout/LogoutConfig";
 
@@ -43,7 +44,8 @@ const routeConfigs = [
     FarmBotDataAppConfig,
     AQMConfig,
     FarmBotConfig,
-    LiveStockConfig
+    LiveStockConfig,
+    HomeConfig
 ];
 
 const routes = [
@@ -51,17 +53,7 @@ const routes = [
     {
         path: "/",
         exact: true,
-        component: () => <Redirect to="/login"/>,
-    },
-    {
-        path: "/su-admin/",
-        exact: true,
-        component: () => <Redirect to="/su-admin/login"/>,
-    },
-    {
-        path: "/dashboard/",
-        exact: true,
-        component: () => <Redirect to="/dashboard"/>,
+        component: () => <Redirect to="/home"/>,
     },
     {
         component: () => <Redirect to="/404"/>,
