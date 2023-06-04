@@ -1,8 +1,8 @@
 import Index from './Index';
 import {authRoles} from 'app/auth';
-import IndexApp from './IndexApp';
+import App from './App';
 
-export const IndexConfig = {
+export const Config = {
     settings: {
         layout: {
             config: {
@@ -24,10 +24,11 @@ export const IndexConfig = {
             }
         }
     },
+    auth: authRoles.onlyGuest,
     routes: [
         {
-            path: '/aqm',
-            component: IndexApp
+            path: '/naqm',
+            component: App
         }
     ]
 };

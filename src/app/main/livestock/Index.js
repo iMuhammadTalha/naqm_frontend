@@ -52,9 +52,9 @@ const mapContainerStyle = {
         <div style={{ textAlign: 'center' }}>
           <img src={process.env.PUBLIC_URL + '/livestock/animal.png'} alt="Image 1" style={{ margin: '0 auto' }} />
         </div>
-        {/* <div style={{ textAlign: 'center' }}>
-          <img src={process.env.PUBLIC_URL + '/livestock/animal.png'} alt="Image 1" style={{ width: '100%', margin: '0 auto', margin: '0 auto' }}/>
-        </div> */}
+        <div style={{ textAlign: 'center' }}>
+          <img src={process.env.PUBLIC_URL + '/livestock/project.png'} alt="Image 1" style={{ margin: '0 auto', margin: '0 auto' }}/>
+        </div>
       </Slider>
     );
   };
