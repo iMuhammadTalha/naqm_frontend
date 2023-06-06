@@ -53,7 +53,7 @@ const mapContainerStyle = {
         <img src={process.env.PUBLIC_URL + '/farmbot/crop.png'} alt="Image 1" height={400} style={{  margin: '0 auto' }}/>
         </div>
         <div style={{ textAlign: 'center' }}>
-        <img src={process.env.PUBLIC_URL + '/farmbot/project.png'} alt="Image 1" height={400} style={{ margin: '0 auto' }}/>
+        <img src={process.env.PUBLIC_URL + '/farmbot/project.PNG'} alt="Image 1" height={400} style={{ margin: '0 auto' }}/>
         </div>
       </Slider>
     );
